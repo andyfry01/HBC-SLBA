@@ -1,0 +1,79 @@
+.primary-navigation {
+  position: relative;
+  width: 100vw;
+  height: 200px;
+}
+.bgImage {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  resize: both;
+  background-image: url('../images/logos/logoSVG.svg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+@media screen and (max-width: 640px) {
+  .menu {
+
+  }
+}
+
+.bgPaddingDiv {
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(255,252,245,1);
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+.menu-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+@media screen and (max-width: 865px) {
+  #navigation ul li {
+    float: right;
+  }
+  .menu-container {
+    justify-content: flex-end
+  }
+}
+
+.infoBoxColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 40rem;
+}
+
+.infoBoxRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.infoItem {
+  height: 20rem;
+  width: 20rem;
+  background-color: rgba(255,252,245,0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.infoItem * {
+  margin: 0 auto;
+  color: rgb(142, 0, 13);
+
+}
