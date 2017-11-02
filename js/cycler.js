@@ -2,7 +2,7 @@ window.onload= function(){
   (function(){
     window.setTimeout(function(){
       sequentiallyToggle(1, 2)
-    }, 5000);
+    }, 7000);
   })();
 
   const numImages = 3
@@ -23,6 +23,6 @@ window.onload= function(){
         nextPlusOne = 1
       }
       sequentiallyToggle(current, nextPlusOne)
-    }, 5000)
+    }, 7000)
   }
 }
