@@ -1,91 +1,84 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>HBC – SLBA</title>
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="dns-prefetch" href="//s.w.org">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>HBC – SLBA</title>
+		<link rel="dns-prefetch" href="//fonts.googleapis.com">
+		<link rel="dns-prefetch" href="//s.w.org">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/slider.css">
-	<link rel="stylesheet" href="./css/custom.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+		<link rel="stylesheet" href="./css/slider.css">
+		<link rel="stylesheet" href="./css/custom.css">
 
-</head>
-<body class="">
-	<header class="pageHeader">
-		<div class="headerLogo">
-			<div class="bgPaddingDiv">
-				<div class="bgImage">
+	</head>
+
+	<body class="">
+		<header class="pageHeader">
+			<div class="headerLogo">
+				<div class="bgPaddingDiv">
+					<div class="bgImage">
+					</div>
 				</div>
 			</div>
+			<ul class="siteNav nav nav-tabs">
+				<li class="nav-item dropdown researchResources">
+					<a class="nav-link dropdown-toggle navItem" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research and Resources</a>
+					<div class="dropdown-menu">
+						<div class="dropdown-item dropdown-section-title">Research</div>
+						<a class="dropdown-item" href="#">Lorem</a>
+						<a class="dropdown-item" href="#">Ipsum</a>
+						<a class="dropdown-item" href="#">Dolor</a>
+						<div class="dropdown-divider"></div>
+						<div class="dropdown-item dropdown-section-title">Resources</div>
+						<a class="dropdown-item" href="#">Sit</a>
+						<a class="dropdown-item" href="#">Amet</a>
+					</div>
+				</li>
+				<li class="nav-item contact">
+					<a class="nav-link navItem" href="#">Contact</a>
+				</li>
+			</ul>
+		</header>
+
+		<div id="target" class="hidden">
+
 		</div>
-		<ul class="siteNav nav nav-tabs">
-		  <li class="nav-item dropdown researchResources">
-		    <a class="nav-link dropdown-toggle navItem" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research and Resources</a>
-		    <div class="dropdown-menu">
-		      <a class="dropdown-item" href="#">Lorem</a>
-		      <a class="dropdown-item" href="#">Ipsum</a>
-		      <a class="dropdown-item" href="#">Dolor</a>
-		      <a class="dropdown-item" href="#">Sit</a>
-		      <a class="dropdown-item" href="#">Amet</a>
-		      <div class="dropdown-divider"></div>
-		      <a class="dropdown-item" href="#">Separated link</a>
-		    </div>
-		  </li>
-		  <li class="nav-item contact">
-		    <a class="nav-link navItem" href="#">Contact</a>
-		  </li>
-		</ul>
-	</header>
-
-
-
-
-	<div class="main-container">
-
-
-
-
-
+		<footer class="hidden">
+			<div class="copyrights">
+				<div class="container">
+					<span>© 2017 HBC-SLBA</span>
+				</div>
+			</div>
+		</footer>
+		<div id="mainPageContent" class="hidden">
 			<div class="tech-slideshow">
 				<div class="infoBoxColumn">
 					<div class="infoBoxRow">
-						<div class="infoItem">
-							<h2>Who we are</h2>
+						<div class="infoItem" id="who">
+							<h2>WHO WE ARE</h2>
 						</div>
-						<div class="infoItem">
-							<h2>What we do</h2>
+						<div class="infoItem" id="what">
+							<h2>WHAT WE DO</h2>
 						</div>
-						<div class="infoItem">
-							<h2>Contact</h2>
+						<div class="infoItem" id="whom">
+							<h2>WHO WE SERVE</h2>
 						</div>
 					</div>
 				</div>
 				<div class="scrollingImg mover-1 onTop"></div>
-			  <div class="scrollingImg mover-2 hidden"></div>
-			  <div class="scrollingImg mover-3 hidden"></div>
+				<div class="scrollingImg mover-2 hidden"></div>
+				<div class="scrollingImg mover-3 hidden"></div>
+				<div class="scrollingImg mover-4 hidden"></div>
 			</div>
-		<footer id="site-footer" role="contentinfo">
-			<div class="copyrights">
-				<div class="container">
-					<div class="row" id="copyright-note">
-						<span> © 2017 Test	</span>
-					</div>
-				</div>
-			</div>
-		</footer>
+		</div>
 
-  </div>
-
-	<script
-  src="https://code.jquery.com/jquery-3.2.1.slim.js"
-  integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg="
-  crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
-	<script src="./js/cycler.js"></script>
-</body>
+		<script src="./js/navigo.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<script src="./js/app.js"></script>
+	</body>
 
 </html>
