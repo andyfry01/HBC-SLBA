@@ -42,15 +42,6 @@
 
 }
 
-@media screen and (max-width: 865px) {
-  #navigation ul li {
-    float: right;
-  }
-  .menu-container {
-    justify-content: flex-end
-  }
-}
-
 .infoBoxColumn {
   display: flex;
   flex-direction: column;
