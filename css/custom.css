@@ -1,7 +1,35 @@
-.primary-navigation {
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  height: 18rem;
+  color: purple;
+  justify-content: flex-start;
+}
+
+.headerLogo {
   position: relative;
   width: 100vw;
   height: 200px;
+}
+.pageHeader {
+  background-color: rgba(255,252,245,1);
+}
+.siteNav {
+  flex-direction: row-reverse;
+  border-bottom: 0;
+  background-color: transparent;
+}
+.navItem {
+  color: rgb(142, 0, 13) !important;
+}
+.navItem:hover {
+  text-decoration: underline;
+}
+.researchResources {
+  order: 2;
+}
+.contact {
+  order: 1;
 }
 .bgImage {
   position: relative;
@@ -12,7 +40,6 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: contain;
-
 }
 
 @media screen and (max-width: 640px) {
@@ -26,7 +53,6 @@
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: rgba(255,252,245,1);
 }
 
 .menu {
@@ -66,5 +92,38 @@
 .infoItem * {
   margin: 0 auto;
   color: rgb(142, 0, 13);
+
+}
+
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .headerLogo {
+    order: 1;
+  }
+  .siteNav {
+    order: 2;
+  }
+  .pageHeader {
+    height: 16rem;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  .headerLogo {
+    order: 2;
+  }
+  .siteNav {
+    order: 1;
+  }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
 
 }
