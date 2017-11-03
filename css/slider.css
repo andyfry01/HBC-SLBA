@@ -43,7 +43,7 @@
 }
 .tech-slideshow .mover-3 {
   /*opacity: 0;*/
-  background: url('../images/ithaca-sample.jpg');
+  background: url('../images/durham-sample.jpg');
   transition: opacity 0.7s ease-out;
   animation: moveSlideshow 160s linear infinite;
   background-position: 0 -10rem;
