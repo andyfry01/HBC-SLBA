@@ -4,7 +4,6 @@ window.onload = function(){
     const root = null;
     const useHash = false; // Defaults to: false
     const router = new Navigo(root, useHash);
-    const numImages = 4
 
     router.on({
       '*': function () {
@@ -55,6 +54,11 @@ window.onload = function(){
   }
 
   function sequentiallyToggle(current, next){
+    console.log(current);
+    console.log(next);
+    const numImages = 4
+    let currentImageIndex = undefined
+    let nextImageIndex = undefined
     let currentPic = '.mover-' + current
     let nextPic = '.mover-' + next
     $(currentPic).toggleClass('onTop')
@@ -63,13 +67,13 @@ window.onload = function(){
     $(nextPic).toggleClass('hidden')
     window.setTimeout(function() {
       if (next < numImages) {
-        currentImage = next
-        let nextImage = next += 1
+        currentImageIndex = next
+        nextImageIndex = next + 1
       } else {
-        currentImage = numImages
-        nextImage = 1
+        currentImageIndex = numImages
+        nextImageIndex = 1
       }
-      sequentiallyToggle(currentImage, nextImage)
+      sequentiallyToggle(currentImageIndex, nextImageIndex)
     }, 7000)
   }
 
