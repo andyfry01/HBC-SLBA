@@ -1,61 +1,93 @@
-window.onload = function(){
-
+$(document).ready(function(){
+  console.log('hi');
   (function(){
+
+    // Router config
     const root = null;
-    const useHash = false; // Defaults to: false
-    const router = new Navigo(root, useHash);
+    const hash = '#!'
+    const useHash = true;
 
+    // Router init
+    const router = new Navigo(root, useHash, hash);
+
+    // Home route definition
+    router.on(() => {
+      loadPage('#target', '../pages/home/home.html')
+      // Start animation for home page
+      window.setTimeout(function(){
+        sequentiallyToggle(1, 2)
+      }, 7000);
+    });
+
+    // More route definitions
     router.on({
-      '*': function () {
-        getTargetDivDimensions()
-        .then(dimensions => {
-          loadPage(dimensions)
-          .then(() => {
-            $('#target').toggleClass('hidden')
-            $('footer').toggleClass('hidden')
-          })
-        })
-      },
-      'test2': function () {
-        console.log('hello');
-      },
-    }).resolve();
+      '/:folder/:url': function(params){
+        console.log('hitting folder route');
+        loadPage('#target', `../pages/${params.folder}/${params.url}.html`)
+      }
+    })
 
-    $('#who').click(() => { console.log('hello');})
-    $('#what').click(() => { console.log('hello');})
-    $('#whom').click(() => { console.log('hello');})
+    // Start router
+    router.resolve();
 
-    window.setTimeout(function(){
-      sequentiallyToggle(1, 2)
-    }, 7000);
   })();
 
-  function getTargetDivDimensions(){
-    return new Promise((resolve, reject) => {
-      let windowHeight = $(window).height()
-      let headerHeight = $('.pageHeader').height()
-      let targetDivHeight = windowHeight - headerHeight
-      let dimensions = {
-        height: targetDivHeight
-      }
-      resolve(dimensions)
+  function loadPage(targetDiv, pageRoute) {
+    Promise.all([
+      getDimensions(window, 'first'),
+      getDimensions('.pageHeader', 'second')
+    ]).then(dimensions => {
+      let dimensionsObj = transformDimensionsArrayIntoObject(dimensions)
+      getTargetDivDimensions(dimensionsObj)
+      .then(dimensions => {
+        setTargetDivHeight(targetDiv, dimensions.height)
+        .then(() => {
+          $(targetDiv).empty()
+          $(targetDiv).load(pageRoute, () => {
+            $('#currentPage').addClass('height100')
+          })
+        })
+      })
     })
   }
 
-  function loadPage(dimensions){
+  function transformDimensionsArrayIntoObject(dimensions){
+    return dimensions.reduce(function(accumulator, current) {
+      accumulator[current.position] = current;
+      return accumulator;
+    }, {});
+  }
+  function getDimensions(target, positionInEquation) {
     return new Promise((resolve, reject) => {
-      $('#target').height(dimensions.height)
-      $('.scrollingImg').height(dimensions.height)
-      $('#mainPageContent').appendTo('#target')
-      $('#mainPageContent').height(dimensions.height)
-      $('#mainPageContent').toggleClass('hidden')
+      let targetName = undefined
+      if (target.console) {
+        targetName = 'window'
+      } else {
+        targetName = target
+      }
+      resolve({
+        name: targetName,
+        position: positionInEquation,
+        height: $(target).height(),
+        width: $(target).width()
+      })
+    })
+  }
+  function getTargetDivDimensions(dimensionsObject){
+    return new Promise((resolve, reject) => {
+      let height = dimensionsObject['first'].height - dimensionsObject['second'].height
+      resolve({height: height})
+    })
+  }
+
+  function setTargetDivHeight(targetDiv, height){
+    return new Promise((resolve, reject) => {
+      $(targetDiv).height(height)
       resolve()
     })
   }
 
   function sequentiallyToggle(current, next){
-    console.log(current);
-    console.log(next);
     const numImages = 4
     let currentImageIndex = undefined
     let nextImageIndex = undefined
@@ -77,4 +109,4 @@ window.onload = function(){
     }, 7000)
   }
 
-}
+})
