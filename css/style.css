@@ -79,21 +79,45 @@
     -webkit-transition: box-shadow border-bottom 0.5s;
     transition: box-shadow border-bottom 0.5s;
   }
-  .infoItem * {
+  .infoItem h2 {
     font-size: 1.5rem;
     margin: 0 auto;
     border-bottom: 0.25rem solid rgb(142, 0, 13);
     padding: 0.75rem;
-    color: rgb(90, 100, 101);
+    color: rgb(90, 100, 101) !important;
     font-family: Cardo;
   }
+  .infoItem a {
+    color: rgb(90, 100, 101) !important;
+  }
 
-  /*  Save for later maybe?  */
-  /*.infoItem *:hover {
-    padding: 0.75rem 1.5rem;
-    -webkit-transition: padding 0.5s;
-    transition: padding 0.5s;
-  }*/
+  .subCategoryPane {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .subCategoryPane .infoBoxColumn {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .subCategoryPane .infoBoxRow {
+    display: block;
+    overflow: scroll;
+    height: 100%;
+  }
+  .subCategoryPane .infoItem {
+    position: relative;
+    height: 5rem;
+    width: 75%;
+    margin: 2rem auto 2rem;
+    background-color: rgba(255,252,245,0.9);
+    border: 0.5px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 
   .pageHeader {
     display: flex;
