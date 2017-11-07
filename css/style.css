@@ -8,6 +8,15 @@
 }
 #target {
   transition: opacity 1s;
+  height: 500px;
+}
+
+#page-main {
+  height: 100%;
+}
+
+.height100 {
+  height: 100%;
 }
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
@@ -43,6 +52,7 @@
     width: 75%;
     margin: 0 auto;
     background-color: rgba(255,252,245,0.9);
+    border: 0.5px solid black;
 
     display: flex;
     flex-direction: column;
