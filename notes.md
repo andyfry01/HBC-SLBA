@@ -11,3 +11,4 @@
 - Add who/what/who to the menu bar.... somehow
 - configure router for the who/what/who endpoints
 - set up folder directory for who/what/who pages
+- add Babel for transpiling 
