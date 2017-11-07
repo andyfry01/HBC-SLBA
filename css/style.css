@@ -18,8 +18,23 @@
 .height100 {
   height: 100%;
 }
+
+.clickable a {
+  position: absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+  background-image: url('empty.gif');
+}
+
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
+
+  .homePage {
+    position: relative;
+  }
   .headerLogo {
     position: relative;
     width: 90vw;
@@ -48,6 +63,7 @@
   }
 
   .infoItem {
+    position: relative;
     height: 25%;
     width: 75%;
     margin: 0 auto;
