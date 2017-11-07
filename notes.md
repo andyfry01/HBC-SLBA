@@ -1,11 +1,13 @@
-Add names below graphic
-research and resources for top menu
-minion pro
+# Todo list:
 
-ithaca
-olympia WA
-colorado
-north carolina
+## Planning
+1. Check table that steve sent, go over different pages that are required
+2. Ask Steve which pages from the table represent which existing pages so we can copy that content over
+3.
 
-squares should be rectangles
-text should be gray like HBC from logo
+## Development
+- Who/What/Who should open up a new div with subsections (see table)
+- Add requisite buttons to these new divs which take you to the right pages
+- Add who/what/who to the menu bar.... somehow
+- configure router for the who/what/who endpoints
+- set up folder directory for who/what/who pages
