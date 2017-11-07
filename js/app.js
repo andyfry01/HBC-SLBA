@@ -21,9 +21,13 @@ $(document).ready(function(){
 
     // More route definitions
     router.on({
-      '/:folder/:url': function(params){
-        console.log('hitting folder route');
-        loadPage('#target', `../pages/${params.folder}/${params.url}.html`)
+      '/:folder/:file': function(params){
+        if (params.folder !== 'sub_categories') {
+          loadPage('#target', `../pages/${params.folder}/${params.file}.html`)
+          return true
+        }
+        loadSubCategory('#subcategoryTarget', `../pages/${params.folder}/${params.file}.html`)
+        return true
       }
     })
 
@@ -32,7 +36,22 @@ $(document).ready(function(){
 
   })();
 
-  function loadPage(targetDiv, pageRoute) {
+  function loadSubCategory(targetDiv, pageRoute){
+    if ($('.homePage').length < 1) {
+      loadPage('#target', '../pages/home/home.html', () => {
+        loadCategoryPane('#subcategoryTarget', pageRoute)
+        return true
+      })
+    }
+    loadCategoryPane('#subcategoryTarget', pageRoute)
+    return true
+  }
+
+  function loadCategoryPane(targetDiv, pageRoute){
+    $(targetDiv).load(pageRoute)
+  }
+
+  function loadPage(targetDiv, pageRoute, next) {
     Promise.all([
       getDimensions(window, 'first'),
       getDimensions('.pageHeader', 'second')
@@ -45,6 +64,9 @@ $(document).ready(function(){
           $(targetDiv).empty()
           $(targetDiv).load(pageRoute, () => {
             $('#currentPage').addClass('height100')
+            if (next) {
+              next()
+            }
           })
         })
       })
@@ -57,6 +79,7 @@ $(document).ready(function(){
       return accumulator;
     }, {});
   }
+
   function getDimensions(target, positionInEquation) {
     return new Promise((resolve, reject) => {
       let targetName = undefined
@@ -73,6 +96,7 @@ $(document).ready(function(){
       })
     })
   }
+
   function getTargetDivDimensions(dimensionsObject){
     return new Promise((resolve, reject) => {
       let height = dimensionsObject['first'].height - dimensionsObject['second'].height
