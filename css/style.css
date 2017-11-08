@@ -83,8 +83,12 @@ body {
     width: 300px;
     margin: 2rem auto;
   }
+  .consultant h2 {
+    margin-top: 2rem;
+  }
+
   .comprehesiveReview h1, h2 {
-    margin: 1rem 2rem;
+    margin: 1rem 0;
   }
 
   .clientColumnsContainer {
@@ -114,11 +118,6 @@ body {
     margin: 1rem auto;
     font-family: 'Cardo', serif;
   }
-
-  .consultant h2 {
-    margin-top: 2rem;
-  }
-
   .homePage {
     position: relative;
   }
