@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(255,252,245);
+}
+
 .dropdown-section-title{
   font-weight: bold;
 }
@@ -32,13 +36,18 @@
   margin: 2rem 0 2rem;
 }
 
+.contentPage {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+
+}
 .contentPage p, span {
   font-size: 1.25rem;
 }
 
 
 /* X button for subCategoryPane*/
-
 .close {
     background: transparent;
     width: 60px;
@@ -46,12 +55,11 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-
 }
 .close:after {
     content: '';
     height: 60px;
-    border-left: 2px solid #fff;
+    border-left: 4px solid #fff;
     position: absolute;
     transform: rotate(45deg);
     left: 28px;
@@ -98,7 +106,6 @@
     position: relative;
     float: none;
     margin: 0 auto;
-    /*width: 10rem;*/
     height: auto;
   }
 
@@ -192,6 +199,7 @@
     display: block;
     overflow: scroll;
     height: 100%;
+    margin-top: 2rem;
   }
   .subCategoryPane .infoItem {
     position: relative;

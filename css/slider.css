@@ -28,27 +28,23 @@
   animation: moveSlideshow 160s linear infinite;
   background: url('../images/colorado-sample.jpg');
   background-repeat: no-repeat;
-  /*opacity: 1;*/
   transition: opacity 0.7s ease-out;
   background-position: 0 top;
 }
 
 .tech-slideshow .mover-2 {
-  /*opacity: 0;*/
   background: url('../images/ithaca-sample.jpg');
   transition: opacity 0.7s ease-out;
   animation: moveSlideshow 160s linear infinite;
   background-position: 0 -10rem;
 }
 .tech-slideshow .mover-3 {
-  /*opacity: 0;*/
   background: url('../images/durham-sample.jpg');
   transition: opacity 0.7s ease-out;
   animation: moveSlideshow 160s linear infinite;
   background-position: 0 -10rem;
 }
 .tech-slideshow .mover-4 {
-  /*opacity: 0;*/
   background: url('../images/carbondale-sample.jpg');
   transition: opacity 0.7s ease-out;
   animation: moveSlideshow 160s linear infinite;
