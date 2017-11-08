@@ -118,6 +118,9 @@
     flex-direction: column;
     justify-content: space-around;
   }
+  .subCategoryPane .infoItem h2 {
+    font-size: 1.25rem;
+  }
 
   .pageHeader {
     display: flex;
@@ -220,6 +223,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+  .subCategoryPane .infoItem {
+    height: 5rem;
+    width: 20rem;
   }
 
 }
