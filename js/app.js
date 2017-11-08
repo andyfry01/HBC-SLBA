@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  let imgTimer = undefined;
   console.log('hi');
   (function(){
 
@@ -13,10 +14,10 @@ $(document).ready(function(){
     // Home route definition
     router.on(() => {
       loadPage('#target', '../pages/home/home.html')
+      // clear any remaining timers from previous page loads
+      window.clearTimeout(imgTimer)
       // Start animation for home page
-      window.setTimeout(function(){
-        sequentiallyToggle(1, 2)
-      }, 7000);
+      sequentiallyToggle(1, 2)
     });
 
     // More route definitions
@@ -121,7 +122,8 @@ $(document).ready(function(){
     $(currentPic).toggleClass('hidden')
     $(nextPic).toggleClass('onTop')
     $(nextPic).toggleClass('hidden')
-    window.setTimeout(function() {
+    imgTimer = window.setTimeout(function() {
+      console.log('timeout fired?');
       if (next < numImages) {
         currentImageIndex = next
         nextImageIndex = next + 1
