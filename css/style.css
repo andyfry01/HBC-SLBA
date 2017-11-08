@@ -28,6 +28,15 @@
   background-image: url('empty.gif');
 }
 
+.subSection {
+  margin: 2rem 0 2rem;
+}
+
+.contentPage p, span {
+  font-size: 1.25rem;
+}
+
+
 /* X button for subCategoryPane*/
 
 .close {
