@@ -11,15 +11,15 @@ const chartLabels = [
 ]
 
 const chartColors = [
-    'red',
-    'orange',
-    'yellow',
-    'green',
-    'blue',
-    'indigo',
-    'violet',
-    'turquoise',
-    'brown'
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "blue",
+  "indigo",
+  "violet",
+  "turquoise",
+  "brown"
 ]
 
 const chartSectionSizes = [
