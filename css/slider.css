@@ -8,7 +8,6 @@
 }
 
 .tech-slideshow > .scrollingImg {
-  /*height: 200px;*/
   width: 2526px;
   position: absolute;
   z-index: -1;

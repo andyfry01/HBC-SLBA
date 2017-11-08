@@ -60,14 +60,25 @@
 .close:before {
     content: '';
     height: 60px;
-    border-left: 2px solid #fff;
+    border-left: 4px solid #fff;
     position: absolute;
     transform: rotate(-45deg);
     left: 28px;
 }
 
+
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
+  .chartBox {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin: 2rem auto;
+  }
+  .comprehesiveReview h1, h2 {
+    margin: 1rem 2rem;
+  }
+
   .clientColumnsContainer {
     display: flex;
     flex-direction: row;
@@ -254,6 +265,12 @@
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
+  .chartBox {
+    position: relative;
+    height: 500px;
+    width: 500px;
+    margin: 2rem auto;
+  }
   .pageHeader {
     height: 12rem;
   }
@@ -270,6 +287,13 @@
   .contentPage {
     text-align: justify;
   }
+  .chartBox {
+    position: relative;
+    height: 600px;
+    width: 600px;
+    margin: 2rem auto;
+  }
+
 
 }
 
