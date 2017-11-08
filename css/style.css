@@ -59,6 +59,16 @@
 
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
+  .clientColumnsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .clientColumn {
+    width: 20rem;
+    text-align: left;
+  }
 
   .consultant {
     margin: 2rem 0 2rem;
