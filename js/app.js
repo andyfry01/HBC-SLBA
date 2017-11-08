@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  const pageDomain = 'https://andyfry01.github.io/HBC-SLBA/'
+
   let imgTimer = undefined;
   console.log('hi');
   (function(){
@@ -13,7 +15,7 @@ $(document).ready(function(){
 
     // Home route definition
     router.on(() => {
-      loadPage('#target', '../pages/home/home.html')
+      loadPage('#target', `${pageDomain}/pages/home/home.html`)
       // clear any remaining timers from previous page loads
       window.clearTimeout(imgTimer)
       // Start animation for home page
@@ -27,7 +29,7 @@ $(document).ready(function(){
         if (params.folder === 'what_we_do' && params.file === 'comprehensive_reviews') {
           console.log('comprehensive_reviews page');
           console.log(params);
-          loadPage('#target', `../pages/${params.folder}/${params.file}.html`, () => {
+          loadPage('#target', `${pageDomain}/pages/${params.folder}/${params.file}.html`, () => {
             buildChart()
             return true
           })
@@ -35,12 +37,12 @@ $(document).ready(function(){
           if (params.folder !== 'sub_categories') {
             console.log('normal page');
             console.log(params);
-            loadPage('#target', `../pages/${params.folder}/${params.file}.html`)
+            loadPage('#target', `${pageDomain}/pages/${params.folder}/${params.file}.html`)
             return true
           }
           console.log('subcategory');
           console.log(params);
-          loadSubCategory('#subcategoryTarget', `../pages/${params.folder}/${params.file}.html`)
+          loadSubCategory('#subcategoryTarget', `${pageDomain}/pages/${params.folder}/${params.file}.html`)
           return true
         }
       }
@@ -51,7 +53,7 @@ $(document).ready(function(){
 
     function loadSubCategory(targetDiv, pageRoute) {
       if ($('.homePage').length < 1) {
-        loadPage('#target', '../pages/home/home.html', () => {
+        loadPage('#target', `${pageDomain}/pages/home/home.html`, () => {
           loadCategoryPane('#subcategoryTarget', pageRoute)
           return true
         })
@@ -81,7 +83,7 @@ $(document).ready(function(){
             $(targetDiv).empty()
             $(targetDiv).load(pageRoute, () => {
               console.log('pageRoute is', pageRoute);
-              if (pageRoute === '../pages/home/home.html') {
+              if (pageRoute === `${pageDomain}/pages/home/home.html`) {
                 $('#currentPage').addClass('height100')
               }
               if (next) {
