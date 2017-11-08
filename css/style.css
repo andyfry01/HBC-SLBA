@@ -118,23 +118,32 @@ body {
     margin: 1rem auto;
     font-family: 'Cardo', serif;
   }
+  .pageHeader {
+    height: 12rem;
+  }
+  .companyNames {
+    font-family: 'Cardo', serif;
+    margin: 0 auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+  }
+  .companyName {
+    margin: 0 !important;
+    font-size: 0.75rem;
+  }
   .homePage {
     position: relative;
   }
-
   .headerLogo {
     position: relative;
     width: 90vw;
     margin: 0 auto;
-    height: 8rem;
-    order: 1;
+    height: 7rem;
     margin-top: 0.5rem;
-  }
-  .siteNav {
-    order: 2;
-  }
-  .pageHeader {
-    height: 12rem;
   }
 
   .infoBoxColumn {
@@ -225,7 +234,7 @@ body {
     background-color: rgba(255,252,245,1);
   }
   .siteNav {
-    flex-direction: row-reverse;
+    flex-direction: row;
     border-bottom: 0;
     background-color: transparent !important;
   }
@@ -279,8 +288,12 @@ body {
     margin: 2rem auto;
   }
   .pageHeader {
-    height: 12rem;
+    height: 13rem;
   }
+  .companyNames {
+    width: 75%;
+  }
+
   .consultantImg {
     float: left;
     margin: 0 1rem 1rem 0;
@@ -300,21 +313,24 @@ body {
     width: 600px;
     margin: 2rem auto;
   }
+  .companyNames {
+    margin-top: 0.5rem;
+    width: 50%;
+  }
 
 
 }
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-  .dropdown-menu {
-    margin-top: 2rem !important;
+  .pageHeader {
+    height: 16rem;
+  }
+  .companyName {
+    font-size: 1rem;
   }
   .headerLogo {
-    order: 2;
-    height: 11rem;
-  }
-  .siteNav {
-    order: 1;
+    height: 9rem;
   }
   .infoBoxColumn {
     display: flex;
