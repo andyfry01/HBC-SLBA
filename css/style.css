@@ -29,6 +29,15 @@
   background-image: url('empty.gif');
 }
 
+.consultantImg {
+  float: left;
+  margin: 0 1rem 1rem 0;
+}
+
+.consultant {
+  margin: 2rem 0 2rem;
+}
+
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
 
@@ -227,6 +236,11 @@
   .subCategoryPane .infoItem {
     height: 5rem;
     width: 20rem;
+  }
+  .consultantsPage {
+    width: 75%;
+    margin: 1rem auto;
+    text-align: justify;
   }
 
 }

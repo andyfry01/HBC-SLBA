@@ -37,7 +37,7 @@ $(document).ready(function(){
 
   })();
 
-  function loadSubCategory(targetDiv, pageRoute){
+  function loadSubCategory(targetDiv, pageRoute) {
     if ($('.homePage').length < 1) {
       loadPage('#target', '../pages/home/home.html', () => {
         loadCategoryPane('#subcategoryTarget', pageRoute)
@@ -64,7 +64,10 @@ $(document).ready(function(){
         .then(() => {
           $(targetDiv).empty()
           $(targetDiv).load(pageRoute, () => {
-            $('#currentPage').addClass('height100')
+            console.log('pageRoute is', pageRoute);
+            if (pageRoute === '../pages/home/home.html') {
+              $('#currentPage').addClass('height100')
+            }
             if (next) {
               next()
             }
