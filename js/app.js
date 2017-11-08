@@ -23,12 +23,26 @@ $(document).ready(function(){
     // More route definitions
     router.on({
       '/:folder/:file': function(params){
-        if (params.folder !== 'sub_categories') {
-          loadPage('#target', `../pages/${params.folder}/${params.file}.html`)
+
+        if (params.folder === 'what_we_do' && params.file === 'comprehensive_reviews') {
+          console.log('comprehensive_reviews page');
+          console.log(params);
+          loadPage('#target', `../pages/${params.folder}/${params.file}.html`, () => {
+            buildChart()
+            return true
+          })
+        } else {
+          if (params.folder !== 'sub_categories') {
+            console.log('normal page');
+            console.log(params);
+            loadPage('#target', `../pages/${params.folder}/${params.file}.html`)
+            return true
+          }
+          console.log('subcategory');
+          console.log(params);
+          loadSubCategory('#subcategoryTarget', `../pages/${params.folder}/${params.file}.html`)
           return true
         }
-        loadSubCategory('#subcategoryTarget', `../pages/${params.folder}/${params.file}.html`)
-        return true
       }
     })
 
