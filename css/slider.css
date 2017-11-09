@@ -25,31 +25,38 @@
 }
 
 .imageSlideshow .image-1 {
-  animation: moveSlideshow 160s linear infinite;
-  background: url('../images/main_page_bg_images/colorado-sample.jpg');
+  /*animation: moveSlideshow 160s linear infinite;*/
+  background: url('../images/main_page_bg_images/1.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   transition: opacity 0.7s ease-out;
-  background-position: 0 top;
+  background-position: 0 -10rem;
 }
-
+/*
 .imageSlideshow .image-2 {
-  background: url('../images/main_page_bg_images/ithaca-sample.jpg');
+  background: url('../images/main_page_bg_images/2.jpg');
   transition: opacity 0.7s ease-out;
   animation: moveSlideshow 160s linear infinite;
+  background-size: cover;
+
   background-position: 0 -10rem;
 }
 .imageSlideshow .image-3 {
-  background: url('../images/main_page_bg_images/durham-sample.jpg');
+  background: url('../images/main_page_bg_images/3.jpg');
   transition: opacity 0.7s ease-out;
   animation: moveSlideshow 160s linear infinite;
+  background-size: cover;
+
   background-position: 0 -10rem;
 }
 .imageSlideshow .image-4 {
-  background: url('../images/main_page_bg_images/carbondale-sample.jpg');
+  background: url('../images/main_page_bg_images/4.jpg');
   transition: opacity 0.7s ease-out;
   animation: moveSlideshow 160s linear infinite;
+  background-size: cover;
+
   background-position: 0 -20rem;
-}
+}*/
 
 @keyframes moveSlideshow {
   100% {

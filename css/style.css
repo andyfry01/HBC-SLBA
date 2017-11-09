@@ -1,7 +1,9 @@
 body {
   background-color: rgb(255,252,245);
 }
-
+.hide {
+  display: none;
+}
 .dropdown-section-title{
   font-weight: bold;
 }
@@ -43,9 +45,15 @@ body {
 .contentPage p, span {
   font-size: 1.25rem;
 }
+.inquiriesPage {
+  padding: 0;
+}
 
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
+  .inquiriesPage h3 {
+    margin-top: 2rem;
+  }
   .menuItems {
     width: 75%;
     margin: 0 auto;
@@ -291,6 +299,10 @@ body {
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
+  .inquiriesPage h3 {
+    margin-top: 3rem;
+  }
+
   .contentPage {
     text-align: justify;
   }

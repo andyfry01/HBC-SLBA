@@ -1,6 +1,6 @@
 $(document).ready(function(){
-  // const pageDomain = 'https://andyfry01.github.io/HBC-SLBA/'
-  const pageDomain = 'http://127.0.0.1:5000'
+  const pageDomain = 'https://andyfry01.github.io/HBC-SLBA/'
+  // const pageDomain = 'http://127.0.0.1:5000'
 
   let imgTimer = undefined;
   (function(){
@@ -15,12 +15,12 @@ $(document).ready(function(){
 
     // Home route definition
     router.on(() => {
-      // loadPage('#target', `${pageDomain}/pages/home/home.html`)
-      loadPage('#target', `../pages/home/home.html`)
+      loadPage('#target', `${pageDomain}/pages/home/home.html`)
+      // loadPage('#target', `../pages/home/home.html`)
       // clear any remaining timers from previous page loads
-      window.clearTimeout(imgTimer)
-      // Start animation for home page
-      sequentiallyToggle(1, 2)
+      // window.clearTimeout(imgTimer)
+      // // Start animation for home page
+      // sequentiallyToggle(1, 2)
     });
 
     // More route definitions
@@ -29,18 +29,21 @@ $(document).ready(function(){
         if (params.folder === 'what_we_do' && params.file === 'comprehensive_reviews') {
           console.log('comprehensive_reviews page');
           console.log(params);
-          // loadPage('#target', `${pageDomain}/pages/${params.folder}/${params.file}.html`, () => {
-          loadPage('#target', `../pages/${params.folder}/${params.file}.html`, () => {
+          loadPage('#target', `${pageDomain}/pages/${params.folder}/${params.file}.html`, () => {
+          // loadPage('#target', `../pages/${params.folder}/${params.file}.html`, () => {
             buildChart()
             return true
           })
         } else {
           console.log('normal page');
           console.log(params);
-          // loadPage('#target', `${pageDomain}/pages/${params.folder}/${params.file}.html`)
-          loadPage('#target', `../pages/${params.folder}/${params.file}.html`)
+          loadPage('#target', `${pageDomain}/pages/${params.folder}/${params.file}.html`)
+          // loadPage('#target', `../pages/${params.folder}/${params.file}.html`)
           return true
         }
+      },
+      '/etc/404': function(params) {
+        loadPage('#target', `../pages/etc/404.html`)
       }
     })
 
@@ -58,10 +61,14 @@ $(document).ready(function(){
           setTargetDivHeight(targetDiv, dimensions.height)
           .then(() => {
             $(targetDiv).empty()
-            $(targetDiv).load(pageRoute, () => {
-              console.log('pageRoute is', pageRoute);
-              // if (pageRoute === `${pageDomain}/pages/home/home.html`) {
-              if (pageRoute === `../pages/home/home.html`) {
+            $(targetDiv).load(pageRoute, (response, status, xhr) => {
+              if (response.slice(0, 13).toLowerCase() !== '<!-- page -->') {
+                router.navigate(`${pageDomain}/pages/etc/404.html`)
+                console.log('not found');
+                router.navigate(`/etc/404`)
+              }
+              if (pageRoute === `${pageDomain}/pages/home/home.html`) {
+              // if (pageRoute === `/../pages/home/home.html`) {
                 $('#currentPage').addClass('height100')
               }
               if (next) {
@@ -130,7 +137,7 @@ $(document).ready(function(){
           nextImageIndex = 1
         }
         sequentiallyToggle(currentImageIndex, nextImageIndex)
-      }, 7000)
+      }, 1000)
     }
   })();
 
