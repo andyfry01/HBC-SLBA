@@ -26,7 +26,6 @@ $(document).ready(function(){
     // More route definitions
     router.on({
       '/:folder/:file': function(params){
-
         if (params.folder === 'what_we_do' && params.file === 'comprehensive_reviews') {
           console.log('comprehensive_reviews page');
           console.log(params);
@@ -36,17 +35,10 @@ $(document).ready(function(){
             return true
           })
         } else {
-          if (params.folder !== 'sub_categories') {
-            console.log('normal page');
-            console.log(params);
-            // loadPage('#target', `${pageDomain}/pages/${params.folder}/${params.file}.html`)
-            loadPage('#target', `../pages/${params.folder}/${params.file}.html`)
-            return true
-          }
-          console.log('subcategory');
+          console.log('normal page');
           console.log(params);
-          // loadSubCategory('#subcategoryTarget', `${pageDomain}/pages/${params.folder}/${params.file}.html`)
-          loadSubCategory('#subcategoryTarget', `../pages/${params.folder}/${params.file}.html`)
+          // loadPage('#target', `${pageDomain}/pages/${params.folder}/${params.file}.html`)
+          loadPage('#target', `../pages/${params.folder}/${params.file}.html`)
           return true
         }
       }
@@ -54,26 +46,6 @@ $(document).ready(function(){
 
     // Start router
     router.resolve();
-
-    function loadSubCategory(targetDiv, pageRoute) {
-      if ($('.homePage').length < 1) {
-        // loadPage('#target', `${pageDomain}/pages/home/home.html`, () => {
-        loadPage('#target', `../pages/home/home.html`, () => {
-          loadCategoryPane('#subcategoryTarget', pageRoute)
-          return true
-        })
-      }
-      loadCategoryPane('#subcategoryTarget', pageRoute)
-      return true
-    }
-
-    function loadCategoryPane(targetDiv, pageRoute){
-      $(targetDiv).load(pageRoute, () => {
-        $('.close').click(() => {
-          router.navigate('/')
-        })
-      })
-    }
 
     function loadPage(targetDiv, pageRoute, next) {
       Promise.all([
