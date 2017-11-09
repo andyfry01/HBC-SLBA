@@ -51,6 +51,13 @@ body {
 
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
+
+  .mobileMenu {
+    display: block;
+  }
+  .desktopMenu {
+    display: none
+  }
   .inquiriesPage h3 {
     margin-top: 2rem;
   }
@@ -322,6 +329,12 @@ body {
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
+  .mobileMenu {
+    display: none;
+  }
+  .desktopMenu {
+    display: block;
+  }
   .pageHeader {
     height: 18rem;
   }
