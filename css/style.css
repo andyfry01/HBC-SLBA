@@ -38,9 +38,6 @@ body {
   margin: 2rem 0 2rem;
 }
 
-.contentPage {
-  padding: 2rem;
-}
 
 .contentPage p, span {
   font-size: 1.25rem;
@@ -51,7 +48,6 @@ body {
 
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
-
   .mobileMenu {
     display: block;
   }
