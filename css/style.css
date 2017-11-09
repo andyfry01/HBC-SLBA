@@ -46,7 +46,6 @@ body {
 
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
-
   .menuItems {
     width: 75%;
     margin: 0 auto;
@@ -303,7 +302,7 @@ body {
   }
   .companyNames {
     margin-top: 0.5rem;
-    width: 50%;
+    width: 40%;
   }
 
 
