@@ -115,7 +115,7 @@ body {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     height: auto;
-    width: 100%;
+    width: 90%;
     text-align: center;
     font-style: italic;
   }
@@ -238,12 +238,6 @@ body {
   .navItem:hover {
     text-decoration: underline;
   }
-  .researchResources {
-    order: 2;
-  }
-  .contact {
-    order: 1;
-  }
   .bgImage {
     position: relative;
     height: 100%;
@@ -318,13 +312,13 @@ body {
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
   .pageHeader {
-    height: 16rem;
+    height: 18rem;
   }
   .companyName {
     font-size: 1rem;
   }
   .headerLogo {
-    height: 9rem;
+    height: 11rem;
   }
   .infoBoxColumn {
     display: flex;
