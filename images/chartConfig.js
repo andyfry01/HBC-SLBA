@@ -1,4 +1,4 @@
-const chartLabels = [
+var chartLabels = [
   "External and Internal Environment",
   "Mission",
   "Eligibility and Enrollment System",
@@ -10,9 +10,9 @@ const chartLabels = [
   "Ongoing Management and Customer Service"
 ]
 
-const chartColors = [
+var chartColors = [
   "red",
-  "orange",
+  "#FFA500",
   "yellow",
   "green",
   "blue",
@@ -22,7 +22,7 @@ const chartColors = [
   "brown"
 ]
 
-const chartSectionSizes = [
+var chartSectionSizes = [
   1,
   1,
   1,
