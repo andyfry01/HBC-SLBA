@@ -16,7 +16,7 @@
 Use this: [google charts](https://developers.google.com/chart/interactive/docs/quick_start)
 
 
-## Notes from call: 
+## Notes from call:
 
 consultants: exiting content
 structure: exiting content (first page)
@@ -39,3 +39,6 @@ past and current: existing (two columns, keep it that way)
 research and resources: insurance choices still to be developed, otherwise existing content is being used
 
 surveys: all external links
+
+
+New List of Inquiries for What We Do email: content should go under what we do category, should be second item after services
