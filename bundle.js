@@ -1,8 +1,11 @@
 'use strict';
 
 $(document).ready(function () {
+  // github pages path:
   // const pageDomain = 'https://andyfry01.github.io/HBC-SLBA/'
-  var pageDomain = 'https://hbc-docrepo2.wordsecure.com/HBC-SLBA/';
+  // live site:
+  var pageDomain = 'https://hbc-slba.com';
+  // local:
   // const pageDomain = '../'
 
   var imgTimer = undefined;
@@ -46,7 +49,6 @@ $(document).ready(function () {
           });
         } else {
           loadPage('#target', pageDomain + '/pages/' + params.folder + '/' + params.file + '.html');
-          // loadPage('#target', `../pages/${params.folder}/${params.file}.html`)
           return true;
         }
       },
@@ -66,12 +68,10 @@ $(document).ready(function () {
             $(targetDiv).empty();
             $(targetDiv).load(pageRoute, function (response, status, xhr) {
               if (response.slice(0, 13).toLowerCase() !== '<!-- page -->') {
-                router.navigate(pageDomain + '/pages/etc/404.html');
-                console.log('not found');
+                // router.navigate(`${pageDomain}/pages/etc/404.html`)
                 router.navigate('/etc/404');
               }
               if (pageRoute === pageDomain + '/pages/home/home.html') {
-                // if (pageRoute === `/../pages/home/home.html`) {
                 $('#currentPage').addClass('height100');
               }
               if (next) {
@@ -137,7 +137,7 @@ $(document).ready(function () {
       }if (current === 1) {
         previousPic = '.image-' + numImages;
         currentPic = '.image-' + current;
-        nextPic = '.image-' + 1;
+        nextPic = '.image-' + next;
         $(previousPic).toggleClass('onTop');
         $(previousPic).toggleClass('hidden');
       } else {
