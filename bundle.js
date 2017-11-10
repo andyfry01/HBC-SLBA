@@ -1,8 +1,8 @@
 'use strict';
 
 $(document).ready(function () {
-  // const pageDomain = 'https://andyfry01.github.io/HBC-SLBA/'
-  var pageDomain = '../';
+  var pageDomain = 'https://andyfry01.github.io/HBC-SLBA/';
+  // const pageDomain = '../'
 
   var imgTimer = undefined;
 
