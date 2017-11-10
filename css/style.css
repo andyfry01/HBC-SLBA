@@ -48,6 +48,12 @@ body {
 
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
+  #mobileChartTarget {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+  }
+
   .mobileMenu {
     display: block;
   }
@@ -112,7 +118,7 @@ body {
   }
 
   .contentPage {
-    width: 80%;
+    width: 90%;
     margin: 1rem auto;
     font-family: 'Cardo', serif;
   }
@@ -296,12 +302,15 @@ body {
     float: left;
     margin: 0 1rem 1rem 0;
   }
-
 }
-
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
+  #mobileChartTarget {
+    height: 0%;
+    width: 0%;
+  }
+
   .inquiriesPage h3 {
     margin-top: 3rem;
   }

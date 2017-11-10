@@ -34,9 +34,14 @@ $(document).ready(function(){
           console.log('comprehensive_reviews page');
           console.log(params);
           loadPage('#target', `${pageDomain}/pages/${params.folder}/${params.file}.html`, () => {
-          // loadPage('#target', `../pages/${params.folder}/${params.file}.html`, () => {
-            buildChart()
-            return true
+            if ($(window).width() > 768) {
+              console.log('window is wide');
+              buildChart()
+              return true
+            } else {
+              $('#mobileChartTarget').prepend(`<img class='img-fluid' src='${pageDomain}/images/etc/mobileChart.png'>`)
+              return true
+            }
           })
         } else {
           console.log('normal page');
