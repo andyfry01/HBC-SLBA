@@ -20,9 +20,9 @@ $(document).ready(function(){
       loadPage('#target', `${pageDomain}/pages/home/home.html`)
       // loadPage('#target', `../pages/home/home.html`)
       // clear any remaining timers from previous page loads
-      // window.clearTimeout(imgTimer)
-      // // Start animation for home page
-      // sequentiallyToggle(1, 2)
+      window.clearTimeout(imgTimer)
+      // Start animation for home page
+      sequentiallyToggle(1, 2)
     });
 
     // More route definitions
@@ -124,12 +124,27 @@ $(document).ready(function(){
       // const numImages = 4
       let currentImageIndex = undefined
       let nextImageIndex = undefined
-      let currentPic = '.image-' + current
-      let nextPic = '.image-' + next
+      let previousPic = undefined
+      let currentPic = undefined
+      let nextPic = undefined
+      if (current > 1) {
+        previousPic = '.image-' + (current - 1)
+        currentPic = '.image-' + current
+        nextPic = '.image-' + next
+        $(previousPic).toggleClass('onTop')
+        $(previousPic).toggleClass('hidden')
+      } if (current === 1) {
+        previousPic = '.image-' + 4
+        currentPic = '.image-' + current
+        nextPic = '.image-' + 1
+        $(previousPic).toggleClass('onTop')
+        $(previousPic).toggleClass('hidden')
+      } else {
+        currentPic = '.image-' + current
+        nextPic = '.image-' + next
+      }
       $(currentPic).toggleClass('onTop')
       $(currentPic).toggleClass('hidden')
-      $(nextPic).toggleClass('onTop')
-      $(nextPic).toggleClass('hidden')
       imgTimer = window.setTimeout(function() {
         if (next < numImages) {
           currentImageIndex = next
@@ -139,7 +154,7 @@ $(document).ready(function(){
           nextImageIndex = 1
         }
         sequentiallyToggle(currentImageIndex, nextImageIndex)
-      }, 1000)
+      }, 8000)
     }
   })();
 

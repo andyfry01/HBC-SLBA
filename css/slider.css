@@ -19,44 +19,124 @@
 
 .onTop {
   opacity: 1;
+  /*animation: moveSlideshow 160s linear infinite;*/
+
 }
 .hidden {
   opacity: 0;
 }
-
-.imageSlideshow .image-1 {
-  /*animation: moveSlideshow 160s linear infinite;*/
-  background: url('../images/main_page_bg_images/1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: opacity 0.7s ease-out;
-  background-position: 0 -10rem;
+.image-1.hidden {
+  background-position: -20rem -20rem;
 }
-/*
-.imageSlideshow .image-2 {
-  background: url('../images/main_page_bg_images/2.jpg');
-  transition: opacity 0.7s ease-out;
-  animation: moveSlideshow 160s linear infinite;
-  background-size: cover;
-
-  background-position: 0 -10rem;
+.image-2.hidden {
+  background-position: -20rem -10rem;
 }
-.imageSlideshow .image-3 {
-  background: url('../images/main_page_bg_images/3.jpg');
-  transition: opacity 0.7s ease-out;
-  animation: moveSlideshow 160s linear infinite;
-  background-size: cover;
-
-  background-position: 0 -10rem;
+.image-3.hidden {
+  background-position: 0 -30rem;
 }
-.imageSlideshow .image-4 {
-  background: url('../images/main_page_bg_images/4.jpg');
-  transition: opacity 0.7s ease-out;
-  animation: moveSlideshow 160s linear infinite;
-  background-size: cover;
+.image-4.hidden {
+  background-position: -20rem -30rem;
+}
 
-  background-position: 0 -20rem;
-}*/
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+  /*colorado mountains*/
+  .imageSlideshow .image-1 {
+    animation: moveSlideshow 240s linear infinite;
+    background: url('../images/main_page_bg_images/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity 0.7s ease-out;
+    background-position: -20rem -20rem;
+  }
+  /*buttermilk*/
+  .imageSlideshow .image-2 {
+    background: url('../images/main_page_bg_images/2.jpg');
+    transition: opacity 0.7s ease-out;
+    animation: moveSlideshow 240s linear infinite;
+    background-size: cover;
+    background-position: -20rem -0rem;
+  }
+  /*barn*/
+  .imageSlideshow .image-3 {
+    background: url('../images/main_page_bg_images/3.jpg');
+    transition: opacity 0.7s ease-out;
+    animation: moveSlideshow 240s linear infinite;
+    background-size: cover;
+    background-position: 0 -30rem;
+  }
+  /*mountains with grass*/
+  .imageSlideshow .image-4 {
+    background: url('../images/main_page_bg_images/4.jpg');
+    transition: opacity 0.7s ease-out;
+    animation: moveSlideshow 240s linear infinite;
+    background-size: cover;
+    background-position: -20rem -30rem;
+  }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  /*colorado mountains*/
+  .imageSlideshow .image-1 {
+    background-position: -30rem -20rem;
+  }
+  /*buttermilk*/
+  .imageSlideshow .image-2 {
+    background-position: -30rem -10rem;
+  }
+  /*barn*/
+  .imageSlideshow .image-3 {
+    background-position: 0 -32rem;
+  }
+  /*mountains with grass*/
+  .imageSlideshow .image-4 {
+    background-position: -30rem -30rem;
+  }
+
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  /*colorado mountains*/
+  .imageSlideshow .image-1 {
+    background-position: -20rem -20rem;
+  }
+  /*buttermilk*/
+  .imageSlideshow .image-2 {
+    background-position: -10rem -20rem;
+  }
+  /*barn*/
+  .imageSlideshow .image-3 {
+    background-position: 0 -30rem;
+  }
+  /*mountains with grass*/
+  .imageSlideshow .image-4 {
+    background-position: -20rem -30rem;
+  }
+}
+
+@media (min-width: 1700px) {
+  /*colorado mountains*/
+  .imageSlideshow .image-1 {
+    background-position: -20rem -20rem;
+  }
+  /*buttermilk*/
+  .imageSlideshow .image-2 {
+    background-position: -10rem -20rem;
+  }
+  /*barn*/
+  .imageSlideshow .image-3 {
+    background-position: 0 -10rem;
+  }
+  /*mountains with grass*/
+  .imageSlideshow .image-4 {
+    background-position: -20rem -20rem;
+  }
+}
+
+
 
 @keyframes moveSlideshow {
   100% {
