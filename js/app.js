@@ -1,7 +1,6 @@
 $(document).ready(function(){
-  const pageDomain = 'https://andyfry01.github.io/HBC-SLBA/'
-  // const pageDomain = 'http://127.0.0.1:5000/'
-  // const pageDomain = '../'
+  // const pageDomain = 'https://andyfry01.github.io/HBC-SLBA/'
+  const pageDomain = '../'
 
   let imgTimer = undefined;
 
