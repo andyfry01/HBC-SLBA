@@ -25,17 +25,14 @@
 .hidden {
   opacity: 0;
 }
-.image-1.hidden {
-  background-position: -20rem -20rem;
-}
-.image-2.hidden {
-  background-position: -20rem -10rem;
-}
-.image-3.hidden {
-  background-position: 0 -30rem;
-}
-.image-4.hidden {
-  background-position: -20rem -30rem;
+/*iphone 5*/
+@media (min-width: 320px) {
+  .imageSlideshow .image-1 {
+    background: url('../images/main_page_bg_images/2.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -10rem;
+  }
 }
 
 /*Medium devices (tablets, 768px and up)*/
@@ -53,6 +50,7 @@
   /*buttermilk*/
   .imageSlideshow .image-2 {
     background: url('../images/main_page_bg_images/2.jpg');
+    background-repeat: no-repeat;
     transition: opacity 0.7s ease-out;
     animation: moveSlideshow 240s linear infinite;
     background-size: cover;
@@ -61,6 +59,7 @@
   /*barn*/
   .imageSlideshow .image-3 {
     background: url('../images/main_page_bg_images/3.jpg');
+    background-repeat: no-repeat;
     transition: opacity 0.7s ease-out;
     animation: moveSlideshow 240s linear infinite;
     background-size: cover;
@@ -69,6 +68,7 @@
   /*mountains with grass*/
   .imageSlideshow .image-4 {
     background: url('../images/main_page_bg_images/4.jpg');
+    background-repeat: no-repeat;
     transition: opacity 0.7s ease-out;
     animation: moveSlideshow 240s linear infinite;
     background-size: cover;

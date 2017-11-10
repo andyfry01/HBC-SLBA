@@ -19,10 +19,12 @@ $(document).ready(function(){
     router.on(() => {
       loadPage('#target', `${pageDomain}/pages/home/home.html`)
       // loadPage('#target', `../pages/home/home.html`)
-      // clear any remaining timers from previous page loads
-      window.clearTimeout(imgTimer)
-      // Start animation for home page
-      sequentiallyToggle(1, 2)
+      if ( $(window).width() > 768 ) {
+        // clear any remaining timers from previous page loads
+        window.clearTimeout(imgTimer)
+        // Start animation for home page
+        sequentiallyToggle(1, 2)
+      }
     });
 
     // More route definitions
