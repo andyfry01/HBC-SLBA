@@ -1,6 +1,6 @@
 $(document).ready(function(){
-  // const pageDomain = 'https://andyfry01.github.io/HBC-SLBA/'
-  const pageDomain = '../'
+  const pageDomain = 'https://andyfry01.github.io/HBC-SLBA/'
+  // const pageDomain = '../'
 
   let imgTimer = undefined;
 
