@@ -49,9 +49,23 @@ body {
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
 
-  .contactCard {
+  .contactPageContent {
     width: 100%;
+  }
 
+  .contactPageContent > div {
+    margin: 2rem 0 2rem;
+  }
+  .contactPage .contactInfo {
+    margin-top: 1rem;
+  }
+  .contactCard {
+    position: relative;
+    width: 100%;
+  }
+  .doreen .contactImg {
+    height: auto;
+    width: 100%;
   }
   #mobileChartTarget {
     height: 100%;
@@ -290,6 +304,33 @@ body {
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
+  .contactPageContent {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .contactImg {
+    float: left;
+    height: auto;
+    width: 15rem;
+    margin-right: 2rem;
+  }
+  .contactPage .contactInfo {
+    margin-top: 1rem;
+  }
+  .contactCard {
+    position: relative;
+    width: 100%;
+  }
+  .doreen .contactImg {
+    width: 15rem;
+    height: auto;
+  }
+  #mobileChartTarget {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+  }
   .chartBox {
     position: relative;
     height: 500px;
