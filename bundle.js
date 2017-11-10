@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
   // const pageDomain = 'https://andyfry01.github.io/HBC-SLBA/'
-  var pageDomain = 'http://hbc-slba.com';
+  var pageDomain = 'https://hbc-docrepo2.wordsecure.com/HBC-SLBA/';
   // const pageDomain = '../'
 
   var imgTimer = undefined;
