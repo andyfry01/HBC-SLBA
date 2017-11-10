@@ -57,16 +57,16 @@
     background-position: -20rem -0rem;
   }
   /*barn*/
-  .imageSlideshow .image-3 {
+  /*.imageSlideshow .image-3 {
     background: url('../images/main_page_bg_images/3.jpg');
     background-repeat: no-repeat;
     transition: opacity 0.7s ease-out;
     animation: moveSlideshow 240s linear infinite;
     background-size: cover;
     background-position: 0 -30rem;
-  }
+  }*/
   /*mountains with grass*/
-  .imageSlideshow .image-4 {
+  .imageSlideshow .image-3 {
     background: url('../images/main_page_bg_images/4.jpg');
     background-repeat: no-repeat;
     transition: opacity 0.7s ease-out;
@@ -87,11 +87,11 @@
     background-position: -30rem -10rem;
   }
   /*barn*/
-  .imageSlideshow .image-3 {
+  /*.imageSlideshow .image-3 {
     background-position: 0 -32rem;
-  }
+  }*/
   /*mountains with grass*/
-  .imageSlideshow .image-4 {
+  .imageSlideshow .image-3 {
     background-position: -30rem -30rem;
   }
 
@@ -108,11 +108,11 @@
     background-position: -10rem -20rem;
   }
   /*barn*/
-  .imageSlideshow .image-3 {
+  /*.imageSlideshow .image-3 {
     background-position: 0 -30rem;
-  }
+  }*/
   /*mountains with grass*/
-  .imageSlideshow .image-4 {
+  .imageSlideshow .image-3 {
     background-position: -20rem -30rem;
   }
 }
@@ -127,11 +127,11 @@
     background-position: -10rem -20rem;
   }
   /*barn*/
-  .imageSlideshow .image-3 {
+  /*.imageSlideshow .image-3 {
     background-position: 0 -10rem;
-  }
+  }*/
   /*mountains with grass*/
-  .imageSlideshow .image-4 {
+  .imageSlideshow .image-3 {
     background-position: -20rem -20rem;
   }
 }

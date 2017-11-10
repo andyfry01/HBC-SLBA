@@ -1,1 +1,1 @@
-var numImages = 4
+var numImages = 3

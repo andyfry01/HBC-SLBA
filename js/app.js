@@ -17,7 +17,7 @@ $(document).ready(function(){
     // Home route definition
     router.on(() => {
       loadPage('#target', `${pageDomain}/pages/home/home.html`)
-      // loadPage('#target', `../pages/home/home.html`)
+      // only start animations for desktop
       if ( $(window).width() > 768 ) {
         // clear any remaining timers from previous page loads
         window.clearTimeout(imgTimer)
@@ -127,7 +127,7 @@ $(document).ready(function(){
     }
 
     function sequentiallyToggle(current, next){
-      // const numImages = 4
+      // numImages variable declaration located in images folder
       let currentImageIndex = undefined
       let nextImageIndex = undefined
       let previousPic = undefined
@@ -140,7 +140,7 @@ $(document).ready(function(){
         $(previousPic).toggleClass('onTop')
         $(previousPic).toggleClass('hidden')
       } if (current === 1) {
-        previousPic = '.image-' + 4
+        previousPic = '.image-' + numImages
         currentPic = '.image-' + current
         nextPic = '.image-' + 1
         $(previousPic).toggleClass('onTop')
@@ -160,7 +160,7 @@ $(document).ready(function(){
           nextImageIndex = 1
         }
         sequentiallyToggle(currentImageIndex, nextImageIndex)
-      }, 8000)
+      }, 16000)
     }
   })();
 
