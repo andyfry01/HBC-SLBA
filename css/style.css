@@ -2,7 +2,7 @@ body {
   background-color: rgb(255,252,245);
 }
 .hide {
-  display: none;
+  display: none !important;
 }
 .dropdown-section-title{
   font-weight: bold;
