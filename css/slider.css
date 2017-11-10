@@ -34,6 +34,14 @@
     background-position: -10rem;
   }
 }
+@media (min-width: 576px) {
+  .imageSlideshow .image-1 {
+    background: url('../images/main_page_bg_images/2.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -0rem;
+  }
+}
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
