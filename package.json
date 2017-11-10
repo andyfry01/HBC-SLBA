@@ -1,0 +1,25 @@
+{
+  "name": "hbc-slba",
+  "version": "1.0.0",
+  "description": "hbc-slba site redesign",
+  "main": "app.js",
+  "scripts": {
+    "build": "./node_modules/.bin/babel ./js/app.js --out-file ./bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyfry01/SLBA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andyfry01/SLBA/issues"
+  },
+  "homepage": "https://github.com/andyfry01/SLBA#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.6.1"
+  }
+}
