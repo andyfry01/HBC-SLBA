@@ -30,21 +30,18 @@ $(document).ready(function(){
     router.on({
       '/:folder/:file': function(params){
         if (params.folder === 'what_we_do' && params.file === 'comprehensive_reviews') {
-          console.log('comprehensive_reviews page');
-          console.log(params);
           loadPage('#target', `${pageDomain}/pages/${params.folder}/${params.file}.html`, () => {
+            // initialize JS chart for desktop
             if ($(window).width() > 768) {
-              console.log('window is wide');
               buildChart()
               return true
             } else {
+              // load chart PNG img for mobile
               $('#mobileChartTarget').prepend(`<img class='img-fluid' src='${pageDomain}/images/etc/mobileChart.png'>`)
               return true
             }
           })
         } else {
-          console.log('normal page');
-          console.log(params);
           loadPage('#target', `${pageDomain}/pages/${params.folder}/${params.file}.html`)
           // loadPage('#target', `../pages/${params.folder}/${params.file}.html`)
           return true
