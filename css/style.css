@@ -48,6 +48,11 @@ body {
 
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
+
+  .contactCard {
+    width: 100%;
+
+  }
   #mobileChartTarget {
     height: 100%;
     width: 100%;
@@ -169,7 +174,7 @@ body {
 
   .infoItem {
     position: relative;
-    height: 25%;
+    height: 5rem;
     padding: 0.5rem;
     width: 75%;
     margin: 0 auto;
