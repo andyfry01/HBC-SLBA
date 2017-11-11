@@ -19,7 +19,6 @@
 
 .onTop {
   opacity: 1;
-  /*animation: moveSlideshow 160s linear infinite;*/
 
 }
 .hidden {
@@ -27,19 +26,11 @@
 }
 /*iphone 5*/
 @media (min-width: 320px) {
-  .imageSlideshow .image-1 {
+  .imageSlideshow {
     background: url('../images/main_page_bg_images/2.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: -10rem;
-  }
-}
-@media (min-width: 576px) {
-  .imageSlideshow .image-1 {
-    background: url('../images/main_page_bg_images/2.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: -0rem;
+    background-size: cover;
+    background-position: center;
   }
 }
 
