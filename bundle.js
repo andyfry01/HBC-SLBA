@@ -2,9 +2,9 @@
 
 $(document).ready(function () {
   // github pages path:
-  var pageDomain = 'https://andyfry01.github.io/HBC-SLBA/';
+  // const pageDomain = 'https://andyfry01.github.io/HBC-SLBA/'
   // live site:
-  // const pageDomain = 'https://hbc-slba.com'
+  var pageDomain = 'https://hbc-slba.com';
   // local:
   // const pageDomain = '../'
 
