@@ -119,7 +119,12 @@ $(document).ready(function(){
 
     function setTargetDivHeight(targetDiv, height){
       return new Promise((resolve, reject) => {
-        $(targetDiv).height(height)
+        // set minimum target div height for desktop browser windows with a window height lower than 510px
+        if (height < 510 && $(window).width() >= 768) {
+          $(targetDiv).height(510)
+        } else {
+          $(targetDiv).height(height)
+        }
         resolve()
       })
     }
