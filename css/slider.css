@@ -36,6 +36,10 @@
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
+  .imageSlideshow {
+    background: rgba(255,252,245,1);
+  }
+
 
   /*colorado mountains*/
   .imageSlideshow .image-1 {
