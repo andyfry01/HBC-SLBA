@@ -48,6 +48,22 @@ body {
 
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
+  
+  /*TO DISPLAY HOMETOWN IMAGE ON MOBILE, DELETE FOLLOWING*/
+  .hometownImgDiv {
+    display: none;
+  }
+  /*TO DISPLAY HOMETOWN IMAGE ON MOBILE, DELETE ABOVE*/
+  
+  .hometownImg {
+    height: 14rem;
+    max-width: 100%;
+  }
+
+  .doreen .hometownImg {
+    height: 14rem !important;
+    max-width: 100%;
+  }
 
   .contactPageContent {
     width: 100%;
@@ -58,15 +74,16 @@ body {
   }
   .contactPage .contactInfo {
     margin-top: 1rem;
+    text-align: center!important;
   }
-  .contactCard {
+  /*.contactCard {
     position: relative;
     width: 100%;
-  }
-  .doreen .contactImg {
+  }*/
+  /*.doreen .contactImg {
     height: auto;
     width: 100%;
-  }
+  }*/
   #mobileChartTarget {
     height: 100%;
     width: 100%;
@@ -304,28 +321,32 @@ body {
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
+
   .contactPageContent {
     width: 75%;
     margin: 0 auto;
   }
 
   .contactImg {
-    float: left;
+    /*height: 15rem;
+    width: auto;*/
+    /*float: left;
     height: auto;
     width: 15rem;
-    margin-right: 2rem;
+    margin-right: 2rem;*/
+    /*height: 12rem !important;*/
   }
   .contactPage .contactInfo {
     margin-top: 1rem;
   }
-  .contactCard {
+  /*.contactCard {
     position: relative;
     width: 100%;
-  }
-  .doreen .contactImg {
+  }*/
+  /*.doreen .contactImg {
     width: 15rem;
     height: auto;
-  }
+  }*/
   #mobileChartTarget {
     height: 100%;
     width: 100%;
@@ -352,6 +373,35 @@ body {
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
+  .contactPage .contactInfo {
+    margin-top: 1rem;
+    text-align: left!important;
+  }
+
+  .contactImg {
+    /*height: 15rem;
+    width: auto;*/
+    /*float: left;
+    height: auto;
+    width: 15rem;
+    margin-right: 2rem;*/
+    /*height: 12rem !important;*/
+  }
+
+  .hometownImgDiv {
+    display: block;
+  }
+  .hometownImg {
+    height: auto;
+    /*height: 14rem;
+    max-width: 100%;*/
+  }
+
+  .doreen .hometownImg {
+    height: auto !important;
+    max-width: 100%;
+  }
+
   #mobileChartTarget {
     height: 0%;
     width: 0%;
@@ -429,7 +479,17 @@ body {
 
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
+  .doreen .hometownImg {
+    height: 12rem !important;
+    max-width: auto;
+  }
+}
 
+@media (min-width: 1600px) {
+  .doreen .hometownImg {
+    height: 18rem !important;
+    max-width: auto;
+  }
 }
 
 
