@@ -150,6 +150,8 @@ $(document).ready(function () {
         nextPic = '.image-' + next;
       }
       $(currentPic).toggleClass('onTop');
+      $(currentPic).toggleClass('moveSlideshow_class_1');
+      $(currentPic).toggleClass('moveSlideshow_class_2');
       $(currentPic).toggleClass('hidden');
       imgTimer = window.setTimeout(function () {
         if (next < numImages) {

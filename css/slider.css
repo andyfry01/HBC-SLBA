@@ -40,10 +40,8 @@
     background: rgba(255,252,245,1);
   }
 
-
   /*colorado mountains*/
   .imageSlideshow .image-1 {
-    animation: moveSlideshow 240s linear infinite;
     background: url('../images/main_page_bg_images/1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,7 +53,6 @@
     background: url('../images/main_page_bg_images/2.jpg');
     background-repeat: no-repeat;
     transition: opacity 0.7s ease-out;
-    animation: moveSlideshow 240s linear infinite;
     background-size: cover;
     background-position: -20rem -0rem;
   }
@@ -73,7 +70,6 @@
     background: url('../images/main_page_bg_images/4.jpg');
     background-repeat: no-repeat;
     transition: opacity 0.7s ease-out;
-    animation: moveSlideshow 240s linear infinite;
     background-size: cover;
     background-position: -20rem -30rem;
   }
@@ -139,9 +135,20 @@
   }
 }
 
+/* Multiple classes and animations for restarting scrolling position, controlled in app.js, see https://css-tricks.com/restart-css-animation/ */
+.moveSlideshow_class_1 {
+  animation: moveSlideshow_animation_1 240s linear infinite;
+}
+.moveSlideshow_class_2 {
+  animation: moveSlideshow_animation_2 240s linear infinite;
+}
 
-
-@keyframes moveSlideshow {
+@keyframes moveSlideshow_animation_1 {
+  100% {
+    transform: translateX(-66.6666%);
+  }
+}
+@keyframes moveSlideshow_animation_2 {
   100% {
     transform: translateX(-66.6666%);
   }
