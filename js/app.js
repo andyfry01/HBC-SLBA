@@ -28,7 +28,7 @@ $(document).ready(function(){
         // Start animation for home page
         sequentiallyToggle(1, 2)
       }
-    });
+    })
 
     // More route definitions
     router.on({
