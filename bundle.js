@@ -30,6 +30,8 @@ $(document).ready(function () {
         // Start animation for home page
         sequentiallyToggle(1, 2);
       }
+      // resize target div on window resize, throttle every 500ms
+      $(window).on('resize', _.throttle(resizeTargetDiv, 500, { 'leading': false, 'trailing': true }));
     });
 
     // More route definitions
@@ -78,6 +80,17 @@ $(document).ready(function () {
                 next();
               }
             });
+          });
+        });
+      });
+    }
+
+    function resizeTargetDiv() {
+      Promise.all([getDimensions(window, 'first'), getDimensions('.pageHeader', 'second')]).then(function (dimensions) {
+        var dimensionsObj = transformDimensionsArrayIntoObject(dimensions);
+        getTargetDivDimensions(dimensionsObj).then(function (dimensions) {
+          setTargetDivHeight('#target', dimensions.height).then(function () {
+            $('#currentPage').addClass('height100');
           });
         });
       });
