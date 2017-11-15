@@ -72,8 +72,8 @@ $(document).ready(function(){
           .then(() => {
             $(targetDiv).empty()
             $(targetDiv).load(pageRoute, (response, status, xhr) => {
-              if (response.slice(0, 13).toLowerCase() !== '<!-- page -->') {
-                // router.navigate(`${pageDomain}/pages/etc/404.html`)
+              // checks page HTML to see if this comment is present, which indicates a valid page. If not, redirects to 404 page.
+              if (response.toLowerCase().indexOf('<!-- page -->') < 0) {
                 router.navigate(`/etc/404`)
               }
               if (pageRoute === `${pageDomain}/pages/home/home.html`) {
