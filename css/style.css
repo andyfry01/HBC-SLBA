@@ -48,13 +48,13 @@ body {
 
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
-  
+
   /*TO DISPLAY HOMETOWN IMAGE ON MOBILE, DELETE FOLLOWING*/
   .hometownImgDiv {
     display: none;
   }
   /*TO DISPLAY HOMETOWN IMAGE ON MOBILE, DELETE ABOVE*/
-  
+
   .hometownImg {
     height: 14rem;
     max-width: 100%;
@@ -139,6 +139,10 @@ body {
   }
   .clientColumn {
     width: 20rem;
+    text-align: left;
+  }
+  .seminarColumn {
+    width: 40rem;
     text-align: left;
   }
 
