@@ -30,7 +30,7 @@ body {
   height:100%;
   top:0;
   left: 0;
-  z-index: 1;
+  z-index: 99;
   background-image: url('empty.gif');
 }
 
@@ -46,8 +46,93 @@ body {
   padding: 0;
 }
 
+.order-first {
+  order: 1
+}
+
+.whiteBG {
+  background: white;
+}
+
+.blackBG {
+  background: black;
+}
+
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
+  .order-sm-2 {
+    order: 2;
+  }
+  .order-sm-3 {
+    order: 3;
+  }
+
+  #carouselExampleIndicators{
+    height: 20rem;
+    margin-bottom: 2rem;
+  }
+
+  .carousel-item {
+    height: 100%;
+  }
+
+  .carousel-inner {
+    height: 100%;
+  }
+
+  .steveAndRachel {
+    background: url('../images/we_support_imgs/steve_and_rachel.jpg');
+  }
+
+  .acha {
+    background: url('../images/we_support_imgs/ACHA.png');
+  }
+
+  .foodBankLarimer {
+    background: url('../images/we_support_imgs/food_bank_larimer.gif');
+  }
+
+  .mce {
+    background: url('../images/we_support_imgs/MCE.png');
+  }
+
+  .wandasRide {
+    background: url('../images/we_support_imgs/wandas_ride.jpg');
+  }
+
+  .womensBean {
+    background: url('../images/we_support_imgs/womens_bean.png');
+  }
+
+  .carouselBGImage {
+    backface-visibility: visible !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+  }
+  .controls {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .controlsRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    height: 2.5rem;
+    width: 5rem;
+    position: relative !important;
+    background: rgba(0,0,0,0.5);
+  }
 
   /*TO DISPLAY HOMETOWN IMAGE ON MOBILE, DELETE FOLLOWING*/
   .hometownImgDiv {
@@ -377,6 +462,17 @@ body {
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
+  #carouselExampleIndicators{
+    height: 30rem;
+    margin-bottom: 2rem;
+  }
+
+  .order-md-2 {
+    order: 2;
+  }
+  .order-md-3 {
+    order: 3;
+  }
   .contactPage .contactInfo {
     margin-top: 1rem;
     text-align: left!important;
