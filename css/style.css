@@ -78,6 +78,10 @@ body {
     transition: box-shadow border-bottom 0.5s;
   }
 
+  .consultantPageImage.jeff {
+    width: 300px;
+  }
+
   .order-sm-2 {
     order: 2;
   }
