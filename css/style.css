@@ -63,7 +63,6 @@ body {
 
   .consultantCard {
     min-height: 27rem;
-    /* min-width: 300px; */
     max-width: 100%;
     padding: 1.5rem 1rem 1rem;
     background: white;
@@ -71,6 +70,12 @@ body {
     color: rgb(142, 0, 13);
     margin: 0 auto;
     margin-bottom: 2rem;
+  }
+
+  .consultantCard:hover {
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.60), 0 0 0 1px rgba(0,0,0,0.30);
+    -webkit-transition: box-shadow border-bottom 0.5s;
+    transition: box-shadow border-bottom 0.5s;
   }
 
   .order-sm-2 {
@@ -601,6 +606,10 @@ body {
 
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
+  .consultantCard {
+    max-width: 500px;
+  }
+
   .doreen .hometownImg {
     height: 12rem !important;
     max-width: auto;
