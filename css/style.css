@@ -60,6 +60,19 @@ body {
 
 /*iphone 5 (320px)*/
 @media (min-width: 320px) {
+
+  .consultantCard {
+    min-height: 27rem;
+    /* min-width: 300px; */
+    max-width: 100%;
+    padding: 1.5rem 1rem 1rem;
+    background: white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    color: rgb(142, 0, 13);
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
   .order-sm-2 {
     order: 2;
   }
@@ -414,6 +427,15 @@ body {
   .contactPageContent {
     width: 75%;
     margin: 0 auto;
+  }
+
+  .consultantCard {
+    /* min-width: 350px; */
+    max-width: 100%;
+  }
+
+  .consultantPageImage {
+    max-height: 300px;
   }
 
   .contactImg {
