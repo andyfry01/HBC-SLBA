@@ -28,7 +28,9 @@ $(document).ready(function(){
         // Start animation for home page
         sequentiallyToggle(1, 2)
       }
-    });
+      // resize target div on window resize, throttle every 500ms
+      $(window).on('resize', _.throttle(resizeTargetDiv, 500, {'leading': false, 'trailing': true}))
+    })
 
     // More route definitions
     router.on({
@@ -70,8 +72,8 @@ $(document).ready(function(){
           .then(() => {
             $(targetDiv).empty()
             $(targetDiv).load(pageRoute, (response, status, xhr) => {
-              if (response.slice(0, 13).toLowerCase() !== '<!-- page -->') {
-                // router.navigate(`${pageDomain}/pages/etc/404.html`)
+              // checks page HTML to see if this comment is present, which indicates a valid page. If not, redirects to 404 page.
+              if (response.toLowerCase().indexOf('<!-- page -->') < 0) {
                 router.navigate(`/etc/404`)
               }
               if (pageRoute === `${pageDomain}/pages/home/home.html`) {
@@ -81,6 +83,22 @@ $(document).ready(function(){
                 next()
               }
             })
+          })
+        })
+      })
+    }
+
+    function resizeTargetDiv(){
+      Promise.all([
+        getDimensions(window, 'first'),
+        getDimensions('.pageHeader', 'second')
+      ]).then(dimensions => {
+        let dimensionsObj = transformDimensionsArrayIntoObject(dimensions)
+        getTargetDivDimensions(dimensionsObj)
+        .then(dimensions => {
+          setTargetDivHeight('#target', dimensions.height)
+          .then(() => {
+            $('#currentPage').addClass('height100')
           })
         })
       })
@@ -119,7 +137,12 @@ $(document).ready(function(){
 
     function setTargetDivHeight(targetDiv, height){
       return new Promise((resolve, reject) => {
-        $(targetDiv).height(height)
+        // set minimum target div height for desktop browser windows with a window height lower than 510px
+        if (height < 510 && $(window).width() >= 768) {
+          $(targetDiv).height(510)
+        } else {
+          $(targetDiv).height(height)
+        }
         resolve()
       })
     }
@@ -148,6 +171,8 @@ $(document).ready(function(){
         nextPic = '.image-' + next
       }
       $(currentPic).toggleClass('onTop')
+      $(currentPic).toggleClass('moveSlideshow_class_1')
+      $(currentPic).toggleClass('moveSlideshow_class_2')
       $(currentPic).toggleClass('hidden')
       imgTimer = window.setTimeout(function() {
         if (next < numImages) {

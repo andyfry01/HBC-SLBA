@@ -46,3 +46,10 @@ New List of Inquiries for What We Do email: content should go under what we do c
 
 make a popup for College Health Programs on the services page (click here for information on what this means). maybe a tooltip?
 slow down transition speed
+
+reset bg image position for each scroll - DONE
+set min height for bg image on main page - DONE
+Add separate consultant pages - DONE
+Add links to separate consultant pages to contact page - DONE
+Add home button on menu - DONE
+Think about using collapse for consultants page

@@ -4,7 +4,9 @@
   "description": "hbc-slba site redesign",
   "main": "app.js",
   "scripts": {
-    "build": "./node_modules/.bin/babel ./js/app.js --out-file ./bundle.js"
+    "build": "./node_modules/.bin/babel ./js/app.js --out-file ./bundle.js",
+    "configProd": "node ./js/automation/configureEnvironment.js https://hbc-slba.com",
+    "configLocal": "node ./js/automation/configureEnvironment.js http://localhost:5000"
   },
   "repository": {
     "type": "git",
