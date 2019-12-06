@@ -4,9 +4,9 @@ $(document).ready(function () {
   // github pages path:
   // const pageDomain = 'https://andyfry01.github.io/HBC-SLBA/'
   // live site:
-  var pageDomain = 'https://hbc-slba.com';
+  // var pageDomain = 'https://hbc-slba.com';
   // local:
-  // const pageDomain = '../'
+  var pageDomain = 'http://209.169.5.24/'
 
   var imgTimer = undefined;
 
