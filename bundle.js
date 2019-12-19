@@ -6,7 +6,7 @@ $(document).ready(function () {
   // live site:
   // var pageDomain = 'https://hbc-slba.com';
   // local:
-  var pageDomain = 'http://209.169.5.24/'
+  var pageDomain = 'https://hbc-slba/'
 
   var imgTimer = undefined;
 
