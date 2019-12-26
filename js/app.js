@@ -2,9 +2,11 @@ $(document).ready(function(){
   // github pages path:
   // const pageDomain = 'https://andyfry01.github.io/HBC-SLBA/'
   // live site:
-  const pageDomain = 'https://www.hbc-slba.com'
+  // const pageDomain = 'https://www.hbc-slba.com'
   // local:
   // const pageDomain = '../'
+  // pageDomain is an empty string to make it possible for redirects from hbc-slba.com and slba.com to load pages successfully
+  const pageDomain = ''
 
   let imgTimer = undefined;
 
