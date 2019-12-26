@@ -14,7 +14,7 @@ const domainRegex = {
 }
 
 const domains = {
-  production: 'https://hbc-slba.com',
+  production: 'https://www.hbc-slba.com',
   local: 'http://localhost:5000'
 }
 
