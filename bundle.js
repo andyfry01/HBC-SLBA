@@ -68,7 +68,7 @@ $(document).ready(function () {
       Promise.all([getDimensions(window, 'first'), getDimensions('.pageHeader', 'second')]).then(function (dimensions) {
         var dimensionsObj = transformDimensionsArrayIntoObject(dimensions);
         getTargetDivDimensions(dimensionsObj).then(function (dimensions) {
-          setTargetDivHeight(targetDiv, dimensions.height).then(function () {
+          setTargetDivHeight(targetDiv, dimensions.height, pageRoute).then(function () {
             $(targetDiv).empty();
             $(targetDiv).load(pageRoute, function (response, status, xhr) {
               // checks page HTML to see if this comment is present, which indicates a valid page. If not, redirects to 404 page.
@@ -129,8 +129,12 @@ $(document).ready(function () {
       });
     }
 
-    function setTargetDivHeight(targetDiv, height) {
+    function setTargetDivHeight(targetDiv, height, pageRoute) {
       return new Promise(function (resolve, reject) {
+        if (pageRoute && pageRoute !== "/pages/home/home.html") {
+          $(targetDiv).removeAttr('height');
+          resolve();
+        }
         // set minimum target div height for desktop browser windows with a window height lower than 510px
         if (height < 510 && $(window).width() >= 768) {
           $(targetDiv).height(510);

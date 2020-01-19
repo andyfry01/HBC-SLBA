@@ -70,7 +70,7 @@ $(document).ready(function(){
         let dimensionsObj = transformDimensionsArrayIntoObject(dimensions)
         getTargetDivDimensions(dimensionsObj)
         .then(dimensions => {
-          setTargetDivHeight(targetDiv, dimensions.height)
+          setTargetDivHeight(targetDiv, dimensions.height, pageRoute)
           .then(() => {
             $(targetDiv).empty()
             $(targetDiv).load(pageRoute, (response, status, xhr) => {
@@ -137,8 +137,12 @@ $(document).ready(function(){
       })
     }
 
-    function setTargetDivHeight(targetDiv, height){
+    function setTargetDivHeight(targetDiv, height, pageRoute){
       return new Promise((resolve, reject) => {
+        if (pageRoute && pageRoute !== "/pages/home/home.html") {
+          $(targetDiv).removeAttr('height') 
+          resolve()
+        }
         // set minimum target div height for desktop browser windows with a window height lower than 510px
         if (height < 510 && $(window).width() >= 768) {
           $(targetDiv).height(510)
