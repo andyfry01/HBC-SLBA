@@ -135,12 +135,18 @@ $(document).ready(function () {
           $(targetDiv).removeAttr('height');
           resolve();
         }
-        // set minimum target div height for desktop browser windows with a window height lower than 510px
-        if (height < 510 && $(window).width() >= 768) {
-          $(targetDiv).height(510);
-        } else {
+        //set minimum target div height for desktop browser windows with a window height lower than 510px
+        if (window.location.href === "https://www.hbc-slba.com/#!/" || window.location.href === "https://www.hbc-slba.com/") {
+
+          if (height < 510 && $(window).width() >= 768) {
+            $(targetDiv).height(510);
+            resolve()
+          } 
+
           $(targetDiv).height(height);
+          resolve()
         }
+
         resolve();
       });
     }
