@@ -182,14 +182,7 @@ body {
     margin-top: 1rem;
     text-align: center!important;
   }
-  /*.contactCard {
-    position: relative;
-    width: 100%;
-  }*/
-  /*.doreen .contactImg {
-    height: auto;
-    width: 100%;
-  }*/
+
   #mobileChartTarget {
     height: 100%;
     width: 100%;
@@ -438,34 +431,15 @@ body {
   }
 
   .consultantCard {
-    /* min-width: 350px; */
     max-width: 100%;
   }
 
   .consultantPageImage {
     max-height: 300px;
   }
-
-  .contactImg {
-    /*height: 15rem;
-    width: auto;*/
-    /*float: left;
-    height: auto;
-    width: 15rem;
-    margin-right: 2rem;*/
-    /*height: 12rem !important;*/
-  }
   .contactPage .contactInfo {
     margin-top: 1rem;
   }
-  /*.contactCard {
-    position: relative;
-    width: 100%;
-  }*/
-  /*.doreen .contactImg {
-    width: 15rem;
-    height: auto;
-  }*/
   #mobileChartTarget {
     height: 100%;
     width: 100%;
@@ -508,23 +482,11 @@ body {
     text-align: left!important;
   }
 
-  .contactImg {
-    /*height: 15rem;
-    width: auto;*/
-    /*float: left;
-    height: auto;
-    width: 15rem;
-    margin-right: 2rem;*/
-    /*height: 12rem !important;*/
-  }
-
   .hometownImgDiv {
     display: block;
   }
   .hometownImg {
     height: auto;
-    /*height: 14rem;
-    max-width: 100%;*/
   }
 
   .doreen .hometownImg {
