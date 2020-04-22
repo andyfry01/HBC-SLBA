@@ -384,6 +384,7 @@ body {
 
   .pageHeader {
     background-color: rgba(255,252,245,1);
+    margin-bottom: 1rem;
   }
   .siteNav {
     flex-direction: row;
