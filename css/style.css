@@ -378,12 +378,9 @@ body {
 
   .pageHeader {
     display: flex;
+    background-color: rgba(255,252,245,1);
     flex-direction: column;
     justify-content: flex-start;
-  }
-
-  .pageHeader {
-    background-color: rgba(255,252,245,1);
     margin-bottom: 1rem;
   }
   .siteNav {
