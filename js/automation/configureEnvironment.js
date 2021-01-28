@@ -15,7 +15,7 @@ const domainRegex = {
 
 const domains = {
   production: 'https://www.hbc-slba.com',
-  local: 'http://localhost:5000'
+  local: 'https://www.hbc-slba.com'
 }
 
 // set old domain to replace and new domain to replace it with
