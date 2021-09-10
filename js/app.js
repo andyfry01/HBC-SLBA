@@ -11,7 +11,7 @@ const router = new Navigo(null, useHash, hash);
 // Home route definition
 router.on({
   "/": () => {
-    loadPage("#target", `/pages/home/home.html`, "");
+    loadPage("#target", `/HBC-SLBA/pages/home/home.html`, "");
 
     // only start animations for desktop
     if ($(window).width() > 768) {
@@ -29,14 +29,14 @@ router.on({
     window.clearTimeout(imgTimer);
     loadPage(
       "#target",
-      `/pages/${params.folder}/${params.file}.html`,
+      `/HBC-SLBA/pages/${params.folder}/${params.file}.html`,
       params.file
     );
   },
   "/etc/404": function (params) {
     // clear any remaining timers from previous page loads
     window.clearTimeout(imgTimer);
-    loadPage("#target", "/pages/etc/404.html", params.file);
+    loadPage("#target", "/HBC-SLBA/pages/etc/404.html", params.file);
   },
 });
 
