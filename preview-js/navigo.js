@@ -528,4 +528,3 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ])
 });
 ;
-//# sourceMappingURL=navigo.js.map

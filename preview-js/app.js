@@ -6,19 +6,20 @@ const hash = "#!";
 const useHash = true;
 
 // Router init
-const router = new Navigo(root, useHash, hash);
+const router = new Navigo(null, useHash, hash);
 
 // Home route definition
-router.on(() => {
-  console.log("loading home");
-  loadPage("#target", `/preview-pages/home/home.html`, "");
+router.on({
+  "/": () => {
+    loadPage("#target", `/preview-pages/home/home.html`, "");
 
-  // only start animations for desktop
-  if ($(window).width() > 768) {
-    // clear any remaining timers from previous page loads
-    window.clearTimeout(imgTimer);
-    // Start animation for home page
-    sequentiallyToggle(1, 2);
+    // only start animations for desktop
+    if ($(window).width() > 768) {
+      // clear any remaining timers from previous page loads
+      window.clearTimeout(imgTimer);
+      // Start animation for home page
+      sequentiallyToggle(1, 2);
+    }
   }
 });
 
