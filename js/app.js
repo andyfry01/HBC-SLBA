@@ -8,13 +8,10 @@ const useHash = true;
 // Router init
 const router = new Navigo(null, useHash, hash);
 
-console.log("HELLO")
-
 // Home route definition
 router.on({
   "/": () => {
-    console.log("loading home");
-    loadPage("#target", `/preview-pages/home/home.html`, "");
+    loadPage("#target", `/pages/home/home.html`, "");
 
     // only start animations for desktop
     if ($(window).width() > 768) {
@@ -32,14 +29,14 @@ router.on({
     window.clearTimeout(imgTimer);
     loadPage(
       "#target",
-      `/preview-pages/${params.folder}/${params.file}.html`,
+      `/pages/${params.folder}/${params.file}.html`,
       params.file
     );
   },
   "/etc/404": function (params) {
     // clear any remaining timers from previous page loads
     window.clearTimeout(imgTimer);
-    loadPage("#target", "/preview-pages/etc/404.html", params.file);
+    loadPage("#target", "/pages/etc/404.html", params.file);
   },
 });
 
@@ -85,6 +82,5 @@ function loadPage(targetDiv, pageRoute, newTitle) {
 }
 
 $(document).ready(function () {
-  console.log("hey")
   router.resolve();
 });
