@@ -1,0 +1,158 @@
+.imageSlideshow {
+  height: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.imageSlideshow > .scrollingImg {
+  width: 3000px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+}
+
+.onTop {
+  opacity: 1;
+
+}
+.hidden {
+  opacity: 0;
+}
+
+/*iphone 5*/
+@media (min-width: 320px) {
+  .imageSlideshow {
+    background: url('../images/main_page_bg_images/2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .imageSlideshow {
+    background: rgba(255,252,245,1);
+  }
+
+  /*colorado mountains*/
+  .imageSlideshow .image-1 {
+    background: url('../images/main_page_bg_images/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity 0.7s ease-out;
+    background-position: -20rem -20rem;
+  }
+  /*buttermilk*/
+  .imageSlideshow .image-2 {
+    background: url('../images/main_page_bg_images/2.jpg');
+    background-repeat: no-repeat;
+    transition: opacity 0.7s ease-out;
+    background-size: cover;
+    background-position: -20rem -0rem;
+  }
+  /*barn*/
+  /*.imageSlideshow .image-3 {
+    background: url('../images/main_page_bg_images/3.jpg');
+    background-repeat: no-repeat;
+    transition: opacity 0.7s ease-out;
+    animation: moveSlideshow 240s linear infinite;
+    background-size: cover;
+    background-position: 0 -30rem;
+  }*/
+  /*mountains with grass*/
+  .imageSlideshow .image-3 {
+    background: url('../images/main_page_bg_images/4.jpg');
+    background-repeat: no-repeat;
+    transition: opacity 0.7s ease-out;
+    background-size: cover;
+    background-position: -20rem -30rem;
+  }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  /*colorado mountains*/
+  .imageSlideshow .image-1 {
+    background-position: -30rem -20rem;
+  }
+  /*buttermilk*/
+  .imageSlideshow .image-2 {
+    background-position: -30rem -10rem;
+  }
+  /*barn*/
+  /*.imageSlideshow .image-3 {
+    background-position: 0 -32rem;
+  }*/
+  /*mountains with grass*/
+  .imageSlideshow .image-3 {
+    background-position: -30rem -30rem;
+  }
+
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  /*colorado mountains*/
+  .imageSlideshow .image-1 {
+    background-position: -20rem -20rem;
+  }
+  /*buttermilk*/
+  .imageSlideshow .image-2 {
+    background-position: -10rem -20rem;
+  }
+  /*barn*/
+  /*.imageSlideshow .image-3 {
+    background-position: 0 -30rem;
+  }*/
+  /*mountains with grass*/
+  .imageSlideshow .image-3 {
+    background-position: -20rem -30rem;
+  }
+}
+
+@media (min-width: 1700px) {
+  /*colorado mountains*/
+  .imageSlideshow .image-1 {
+    background-position: -20rem -20rem;
+  }
+  /*buttermilk*/
+  .imageSlideshow .image-2 {
+    background-position: -10rem -20rem;
+  }
+  /*barn*/
+  /*.imageSlideshow .image-3 {
+    background-position: 0 -10rem;
+  }*/
+  /*mountains with grass*/
+  .imageSlideshow .image-3 {
+    background-position: -20rem -20rem;
+  }
+}
+
+/* Multiple classes and animations for restarting scrolling position, controlled in app.js, see https://css-tricks.com/restart-css-animation/ */
+.moveSlideshow_class_1 {
+  animation: moveSlideshow_animation_1 240s linear infinite;
+}
+
+.moveSlideshow_class_2 {
+  animation: moveSlideshow_animation_2 240s linear infinite;
+}
+
+@keyframes moveSlideshow_animation_1 {
+  100% {
+    transform: translateX(-66.6666%);
+  }
+}
+
+@keyframes moveSlideshow_animation_2 {
+  100% {
+    transform: translateX(-66.6666%);
+  }
+}
