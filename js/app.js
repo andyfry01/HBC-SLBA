@@ -11,7 +11,7 @@ const router = new Navigo(null, useHash, hash);
 // Home route definition
 router.on({
   "/": () => {
-    loadPage("#target", `/HBC-SLBA/pages/home/home.html`, "");
+    loadPage("#target", `/HBC-SLBA/pages/home/intro.html`, "");
 
     // only start animations for desktop
     if ($(window).width() > 768) {
