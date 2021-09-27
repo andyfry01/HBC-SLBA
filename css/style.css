@@ -632,3 +632,7 @@ keyframes fadein {
 .width-limiter {
   max-width: 65rem;
 } 
+
+.contact-us {
+  font-size: 2rem;
+}
