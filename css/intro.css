@@ -45,7 +45,7 @@ footer {
 @media (min-width: 768px) {
   .intro-content {
     margin: 0 auto;
-    max-width: 65ch;
+    max-width: 80ch;
     padding: 6rem;
   }
 }
@@ -97,14 +97,24 @@ footer {
 }
 
 .small-text {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .big-text {
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
+@media (min-width: 768px) {
+  .small-text {
+    font-size: 1.5rem;
+  }
+
+  .big-text {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
 .before {
   color: rgb(88, 83, 92);
 }
