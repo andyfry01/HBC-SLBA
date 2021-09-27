@@ -54,7 +54,7 @@ body {
 }
 
 
-.contentPage p, span {
+.contentPage p, span, a {
   font-size: 1.25rem;
 }
 .inquiriesPage {
