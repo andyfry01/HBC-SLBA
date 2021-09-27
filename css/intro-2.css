@@ -23,7 +23,6 @@ div.intro-2  {
   }
 }
 
-
 .intro-2 .logo {
   max-width: 100%;
 }
@@ -52,24 +51,34 @@ footer {
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .intro-2 .intro-content {
     margin: 0 auto;
-    max-width: 65ch;
+    max-width: 80ch;
     padding: 6rem;
   }
 }
 
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .intro-2 .logo-link {
   text-align: center;
+  flex: 1;
 }
 
 .intro-2 .logo {
   max-height: 20rem;
   max-width: 100%;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem auto;
+  /* margin-bottom: 2rem; */
 }
 
 .intro-2 .link-container {
@@ -109,11 +118,11 @@ footer {
 }
 
 .intro-2 .small-text {
-  font-size: 1rem;
+  font-size: .75rem;
 }
 
 .intro-2 .big-text {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
