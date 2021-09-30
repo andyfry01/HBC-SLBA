@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg version="1.1" viewBox="0 0 741.78 191.16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
     xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="HB&amp;L Logo">
     <metadata>
         <rdf:RDF>
             <cc:Work rdf:about="">
@@ -11,6 +11,44 @@
             </cc:Work>
         </rdf:RDF>
     </metadata>
+  <title>HB&amp;L Logo</title>
+    
+    <style>
+        .hodgkins-beckley-lyon {
+            fill: #851618;
+            font-family: "Libre Baskerville", serif;
+            font-size: 11.869px;
+        }
+
+        .healthcare-management-specializing {
+            fill: #59535d;
+            font-family: "Rubik Light", sans-serif;
+            font-size: 12.626px;
+            font-style: italic;
+            letter-spacing: .25px;
+            font-weight: 400;
+        }
+
+        .founded-in-2006 {
+            fill: #59535d;
+            font-family: "Rubik Light", serif;
+            font-size: 7.6298px;
+            font-weight: 300;
+        }
+
+        .HBL {
+            fill: #59535d;
+            font-family: "Lora", serif;
+            font-size: 52.087px;
+        }
+
+        .ampersand {
+            fill: #59535d;
+            font-family: "Lora", serif;
+            font-size: 30.519px;
+        }
+
+    </style>
     <defs>
         <clipPath id="clipPath849">
             <path d="m0 612h792v-612h-792z" />
@@ -68,13 +106,13 @@
                     </g>
                 </g>
             </g>
-        </g><text transform="matrix(1 0 0 -1 266.62 323.36)" style="fill:#59535d;font-family:Lora;font-size:52.087px">
+        </g><text transform="matrix(1 0 0 -1 266.62 323.36)" class="HBL" >
             <tspan x="0 40.367657" y="0">HB</tspan>
         </text><text transform="matrix(1 0 0 -1 339.12 323.36)"
-            style="fill:#59535d;font-family:Lora;font-size:30.519px">
+            class="ampersand">
             <tspan x="0" y="0">&amp;</tspan>
         </text><text transform="matrix(1 0 0 -1 360.18 323.36)"
-            style="fill:#59535d;font-family:Lora;font-size:52.087px">
+            class="HBL">
             <tspan x="0" y="0">L</tspan>
         </text>
         <g clip-path="url(#clipPath911)">
@@ -138,29 +176,19 @@
                     </g>
                 </g>
             </g>
-        </g><text transform="matrix(1 0 0 -1 423.88 335.74)"
-            style="fill:#851618;font-family:'Libre Baskerville';font-size:11.869px">
-            <tspan
-                x="0 11.405725 23.072557 34.157829 45.076942 54.916012 60.43491 71.663795 79.912468 83.912186 93.536438 102.74647 112.85852 122.69759 131.91949 141.12952 149.95976 153.95947 164.97354 168.97325 177.25754 186.07591 197.74275"
-                y="0">HODGKINS BECKLEY &amp; LYON</tspan>
+        </g>
+        <text transform="matrix(1 0 0 -1 423.88 335.74)"
+            class="hodgkins-beckley-lyon">
+            <tspan x="0" y="0">HODGKINS BECKLEY &amp; LYON</tspan>
         </text><text transform="matrix(1 0 0 -.99232 310.81 295.96)"
-            style="fill:#59535d;font-family:'Rubik Light';font-size:12.626px;font-style:italic;font-weight:300">
-            <tspan
-                x="0 9.3302441 16.69091 24.405092 27.801352 32.965179 40.969746 48.242035 55.956215 61.006416 68.367081 71.839096 82.204628 89.918808 97.885498 105.59969 113.42749 120.78816 132.34048 139.70116 147.56685 152.73067 156.20268 163.91687 171.88356 179.69875"
-                y="0">Healthcare Management and </tspan>
+           class="healthcare-management-specializing" >
+            <tspan x="0" y="0">Healthcare Management and Beneﬁt Consultants</tspan>
         </text><text transform="matrix(1 0 0 -.99232 493.98 295.96)"
-            style="fill:#59535d;font-family:'Rubik Light';font-size:12.626px;font-style:italic;font-weight:300">
-            <tspan
-                x="0 8.7873478 16.148014 24.114704 31.386993 38.621403 43.785233 47.257248 55.968842 63.506264 71.472954 78.2276 86.143784 89.540047 94.703873 102.41805 110.28374 115.44757 122.20222"
-                y="0">Beneﬁt Consultants </tspan>
-            <tspan
-                x="-183.17076 -175.02731 -167.21213 -159.85146 -152.57916 -149.19553 -141.48135 -138.0851 -134.70146 -127.99732 -124.61369 -116.647 -108.81918 -105.34718 -101.96354 -93.996849 -90.524834 -81.194588 -77.810959 -69.983147 -61.97858 -54.617912 -49.757095 -46.285084 -38.406773 -30.591587 -22.675398 -15.40311 -7.6889296 -2.5251 0.85853398 8.3959579"
-                y="18.93825">Specializing in Higher Education</tspan>
+            class="healthcare-management-specializing" >
+            <tspan x="-183.17076" y="18.93825">Specializing in Higher Education</tspan>
         </text><text transform="matrix(1 0 0 -1 310.75 257.05)"
-            style="fill:#59535d;font-family:'Rubik Light';font-size:7.6298px;font-weight:300">
-            <tspan
-                x="0 4.7526026 9.5135975 14.488227 19.493376 24.414597 29.068775 33.989998 36.240788 38.537357 43.542507 45.793297 50.653481 55.87989 61.106304 66.088562 68.339355 70.498589 72.749382 78.570915 83.331909 88.253136 93.189613 97.50808 99.803886 104.80904 109.08173 111.33251 116.81071 121.46489 126.05803 130.3765 132.61203 137.12125 141.50838 143.75917 149.22211 153.98309 158.98825 163.26094 168.23557 170.4711 173.83583 176.1324 181.13756 186.07404 188.32483 193.00189 197.60266 202.96642 205.24773 207.49852 213.13693 218.55409 223.84918 226.09996 231.92151 236.6825 241.60371 246.54021 250.85867 253.15448 258.15964 262.43231 264.68311 270.16129 274.81549 279.40863 283.72708 285.96262 290.47183 294.85895 297.10974 302.78632 305.03711 308.98172 313.4299 318.19089"
-                y="0">Founded in 2006 | Hodgkins Beckley Consulting LLC, DBA Hodgkins Beckley &amp; Lyon</tspan>
-        </text>
+            class="founded-in-2006">
+            <tspan x="0" y="0">Founded in 2006 | Hodgkins Beckley Consulting LLC, DBA Hodgkins Beckley &amp; Lyon</tspan>
+        </text> 
     </g>
 </svg>
