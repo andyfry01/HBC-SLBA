@@ -1,0 +1,633 @@
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  padding-bottom: 5rem;
+}
+
+body {
+  background-color: rgb(255,252,245);
+}
+.hide {
+  display: none !important;
+}
+.dropdown-section-title{
+  font-weight: bold;
+}
+.dropdown-section-title:hover{
+  color: #212529;
+  background: none;
+}
+#target {
+  transition: opacity 1s;
+}
+
+#page-main {
+  height: 100%;
+}
+
+.height100 {
+  height: 100%;
+}
+
+.clickable a {
+  position: absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 99;
+  background-image: url('empty.gif');
+}
+
+.subSection {
+  margin: 2rem 0 2rem;
+}
+
+
+.contentPage p, span {
+  font-size: 1.25rem;
+}
+.inquiriesPage {
+  padding: 0;
+}
+
+.order-first {
+  order: 1
+}
+
+.whiteBG {
+  background: white;
+}
+
+.blackBG {
+  background: black;
+}
+
+/*iphone 5 (320px)*/
+@media (min-width: 320px) {
+
+  .consultantCard {
+    min-height: 27rem;
+    max-width: 100%;
+    padding: 1.5rem 1rem 1rem;
+    background: white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    color: rgb(142, 0, 13);
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  .consultantCard:hover {
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.60), 0 0 0 1px rgba(0,0,0,0.30);
+    -webkit-transition: box-shadow border-bottom 0.5s;
+    transition: box-shadow border-bottom 0.5s;
+  }
+
+  .consultantPageImage.jeff {
+    width: 300px;
+  }
+
+  .order-sm-2 {
+    order: 2;
+  }
+  .order-sm-3 {
+    order: 3;
+  }
+
+  #carouselExampleIndicators{
+    height: 20rem;
+    margin-bottom: 2rem;
+  }
+
+  .carousel-item {
+    height: 100%;
+  }
+
+  .carousel-inner {
+    height: 100%;
+  }
+
+  .steveAndRachel {
+    background: url('../images/we_support_imgs/steve_and_rachel.jpg');
+  }
+
+  .acha {
+    background: url('../images/we_support_imgs/ACHA.png');
+  }
+
+  .foodBankLarimer {
+    background: url('../images/we_support_imgs/food_bank_larimer.gif');
+  }
+
+  .mce {
+    background: url('../images/we_support_imgs/MCE.png');
+  }
+
+  .wandasRide {
+    background: url('../images/we_support_imgs/wandas_ride.jpg');
+  }
+
+  .womensBean {
+    background: url('../images/we_support_imgs/womens_bean.png');
+  }
+
+  .carouselBGImage {
+    backface-visibility: visible !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+  }
+  .controls {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .controlsRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    height: 2.5rem;
+    width: 5rem;
+    position: relative !important;
+    background: rgba(0,0,0,0.5);
+  }
+
+  /*TO DISPLAY HOMETOWN IMAGE ON MOBILE, DELETE FOLLOWING*/
+  .hometownImgDiv {
+    display: none;
+  }
+  /*TO DISPLAY HOMETOWN IMAGE ON MOBILE, DELETE ABOVE*/
+
+  .hometownImg {
+    height: 14rem;
+    max-width: 100%;
+  }
+
+  .doreen .hometownImg {
+    height: 14rem !important;
+    max-width: 100%;
+  }
+
+  .contactPageContent {
+    width: 100%;
+  }
+
+  .contactPageContent > div {
+    margin: 2rem 0 2rem;
+  }
+  .contactPage .contactInfo {
+    margin-top: 1rem;
+    text-align: center!important;
+  }
+
+  #mobileChartTarget {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+  .desktopMenu {
+    display: none
+  }
+  .inquiriesPage h3 {
+    margin-top: 2rem;
+  }
+  .menuItems {
+    width: 75%;
+    margin: 0 auto;
+    background-color: rgba(255,252,245,0.9);
+    border: 0.5px solid black;
+    font-family: 'Cardo', serif;
+  }
+  .menuItems:nth-last-child() {
+    margin-bottom: 5rem;
+  }
+  .menuItem {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .menuItem > a {
+    color: black !important;
+  }
+
+  .chartBox {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin: 2rem auto;
+  }
+  .consultant h2 {
+    margin-top: 2rem;
+  }
+
+  .comprehesiveReview h1, h2 {
+    margin: 1rem 0;
+  }
+
+  .clientColumnsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .clientColumn {
+    width: 20rem;
+    text-align: left;
+  }
+  .seminarColumn {
+    width: 40rem;
+    text-align: left;
+  }
+
+  .consultant {
+    margin: 4rem 0;
+  }
+
+  .consultantImg {
+    position: relative;
+    float: none;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .contentPage {
+    width: 90%;
+    margin: 1rem auto;
+    font-family: 'Cardo', serif;
+  }
+  .companyNames {
+    font-family: 'Cardo', serif;
+    margin: 0 auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: auto;
+    width: 90%;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .companyName {
+    margin: 0 !important;
+    font-size: 0.75rem;
+  }
+
+  .homePage {
+    position: relative;
+  }
+  
+  .headerLogo {
+    position: relative;
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .infoBoxColumn {
+    height: 100%;
+  }
+
+  .infoBoxRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+  }
+  .infoBoxRow > .menuItem {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .infoItem {
+    position: relative;
+    height: 5rem;
+    padding: 0.5rem;
+    width: 75%;
+    margin: 0 auto;
+    background-color: rgba(255,252,245,0.9);
+    border: 0.5px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .infoItem:hover {
+    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.5);
+    -webkit-transition: box-shadow border-bottom 0.5s;
+    transition: box-shadow border-bottom 0.5s;
+  }
+  .infoItem h2 {
+    font-size: 1.5rem;
+    margin: 0 auto;
+    border-bottom: 0.25rem solid rgb(142, 0, 13);
+    padding: 0.75rem;
+    color: rgb(90, 100, 101) !important;
+    font-family: 'Cardo', serif;
+  }
+  .infoItem a {
+    color: rgb(90, 100, 101) !important;
+  }
+
+  .subCategoryPane {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-animation: fadein 0.3s;
+    -moz-animation: fadein 0.3s;
+    -ms-animation: fadein 0.3s;
+    -o-animation: fadein 0.3s;
+    animation: fadein 0.3s;
+  }
+  .subCategoryPane .infoBoxColumn {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .subCategoryPane .infoBoxRow {
+    display: block;
+    overflow: scroll;
+    height: 100%;
+    margin-top: 2rem;
+  }
+  .subCategoryPane .infoItem {
+    position: relative;
+    height: 5rem;
+    width: 75%;
+    margin: 2rem auto 2rem;
+    background-color: rgba(255,252,245,0.9);
+    border: 0.5px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .subCategoryPane .infoItem h2 {
+    font-size: 1.25rem;
+  }
+
+  .pageHeader {
+    display: flex;
+    background-color: rgba(255,252,245,1);
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+  }
+  .siteNav {
+    flex-direction: row;
+    border-bottom: 0;
+    background-color: transparent !important;
+  }
+  .navItem {
+    color: rgb(142, 0, 13) !important;
+  }
+  .navItem:hover {
+    text-decoration: underline;
+  }
+
+  .logo {
+    height: auto;
+  }
+
+  .mainLogo {
+    height: 7rem;
+    margin-bottom: 1rem;
+  }
+
+  .bgPaddingDiv {
+    height: 100%;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+  .menu-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+
+  .contactPageContent {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .consultantCard {
+    max-width: 100%;
+  }
+
+  .consultantPageImage {
+    max-height: 300px;
+  }
+  .contactPage .contactInfo {
+    margin-top: 1rem;
+  }
+  #mobileChartTarget {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+  }
+  .chartBox {
+    position: relative;
+    height: 500px;
+    width: 500px;
+    margin: 2rem auto;
+  }
+  .companyNames {
+    width: 75%;
+  }
+
+  .consultantImg {
+    float: left;
+    margin: 0 1rem 1rem 0;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+
+  .mainLogo {
+    /* height: auto; */
+    /* width: 80%; */
+    height: 14rem;
+    max-width: 100%;
+  }
+  
+  #carouselExampleIndicators {
+    height: 30rem;
+    margin-bottom: 2rem;
+  }
+
+  .order-md-2 {
+    order: 2;
+  }
+  .order-md-3 {
+    order: 3;
+  }
+  .contactPage .contactInfo {
+    margin-top: 1rem;
+    text-align: left!important;
+  }
+
+  .hometownImgDiv {
+    display: block;
+  }
+  .hometownImg {
+    height: auto;
+  }
+
+  .doreen .hometownImg {
+    height: auto !important;
+    max-width: 100%;
+  }
+
+  #mobileChartTarget {
+    height: 0%;
+    width: 0%;
+  }
+
+  .inquiriesPage h3 {
+    margin-top: 3rem;
+  }
+
+  .contentPage {
+    text-align: justify;
+  }
+  .chartBox {
+    position: relative;
+    height: 600px;
+    width: 600px;
+    margin: 2rem auto;
+  }
+  .companyNames {
+    margin-top: 0.5rem;
+    width: 40%;
+  }
+
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  .mobileMenu {
+    display: none;
+  }
+  .desktopMenu {
+    display: block;
+  }
+  .companyName {
+    font-size: 1rem;
+  }
+  .infoBoxColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .infoBoxRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50rem;
+    padding-top: 5rem;
+    width: 100%;
+  }
+  .infoItem {
+    height: 10rem;
+    width: 20rem;
+    background-color: rgba(255,252,245,0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .menuItems {
+    width: 20rem;
+  }
+  .subCategoryPane .infoItem {
+    height: 5rem;
+    width: 20rem;
+  }
+
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  .consultantCard {
+    max-width: 500px;
+  }
+
+  .doreen .hometownImg {
+    height: 12rem !important;
+    max-width: auto;
+  }
+}
+
+@media (min-width: 1600px) {
+  .doreen .hometownImg {
+    height: 18rem !important;
+    max-width: auto;
+  }
+}
+
+
+keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+.width-limiter {
+  max-width: 65rem;
+} 
